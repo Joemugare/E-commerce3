@@ -7,7 +7,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-your-secret-key-here-change-in-production'
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'e-commerce3-3o8o.onrender.com'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -123,4 +127,5 @@ STRIPE_PUBLISHABLE_KEY = ''
 STRIPE_SECRET_KEY = ''
 
 # Cart session settings
+
 CART_SESSION_ID = 'cart'
