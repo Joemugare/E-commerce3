@@ -1,0 +1,475 @@
+{% extends 'base.html' %}
+{% block title %}Home - EcommerceStore{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Custom CSS for enhanced homepage */
+    .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
+        background-size: cover;
+        animation: float 20s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        animation: slideInUp 1s ease-out;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+        animation: slideInUp 1s ease-out 0.3s both;
+    }
+    
+    .hero-cta {
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+        border: none;
+        box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        transition: all 0.3s ease;
+        animation: slideInUp 1s ease-out 0.6s both;
+    }
+    
+    .hero-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
+    }
+    
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        border-radius: 2px;
+    }
+    
+    .category-card {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+        background: white;
+    }
+    
+    .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .category-card img {
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .category-card:hover img {
+        transform: scale(1.05);
+    }
+    
+    .category-card .card-body {
+        padding: 2rem;
+    }
+    
+    .category-card .card-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+    
+    .category-btn {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        border: none;
+        border-radius: 25px;
+        padding: 12px 30px;
+        transition: all 0.3s ease;
+    }
+    
+    .category-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    }
+    
+    .product-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        background: white;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .product-card img {
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover img {
+        transform: scale(1.02);
+    }
+    
+    .product-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .price-original {
+        text-decoration: line-through;
+        color: #999;
+        margin-right: 10px;
+    }
+    
+    .price-discount {
+        color: #e74c3c;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    
+    .discount-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(45deg, #e74c3c, #c0392b);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(231, 76, 60, 0.3);
+    }
+    
+    .view-all-btn {
+        background: linear-gradient(45deg, #3498db, #2980b9);
+        border: none;
+        border-radius: 30px;
+        padding: 12px 40px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .view-all-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+    }
+    
+    .stats-section {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 80px 0;
+        color: white;
+        margin: 80px 0;
+    }
+    
+    .stat-item {
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+    
+    .newsletter-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 60px 0;
+        color: white;
+        text-align: center;
+    }
+    
+    .newsletter-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .newsletter-form {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .newsletter-input {
+        flex: 1;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+    }
+    
+    .newsletter-btn {
+        background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+        border: none;
+        border-radius: 30px;
+        padding: 15px 30px;
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .newsletter-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+    }
+    
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+    
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 2.5rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+        }
+        
+        .newsletter-form {
+            flex-direction: column;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <!-- Enhanced Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center hero-content">
+                    <h1 class="hero-title text-white">Welcome to Transdigital</h1>
+                    <p class="hero-subtitle text-white">Discover amazing products at unbeatable prices with fast delivery and exceptional service</p>
+                    <a href="{% url 'products:product_list' %}" class="btn hero-cta text-white">
+                        <i class="fas fa-shopping-bag me-2"></i>Start Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 stat-item fade-in">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="col-md-3 stat-item fade-in">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="col-md-3 stat-item fade-in">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="col-md-3 stat-item fade-in">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enhanced Categories Section -->
+    {% if categories %}
+    <div class="container mb-5">
+        <div class="text-center mb-5 fade-in">
+            <h2 class="section-title">Shop by Category</h2>
+            <p class="text-muted">Explore our wide range of carefully curated categories</p>
+        </div>
+        <div class="row">
+            {% for category in categories %}
+            <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                <div class="category-card card h-100">
+                    {% if category.image %}
+                        <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}">
+                    {% else %}
+                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text={{ category.name }}" class="card-img-top" alt="{{ category.name }}">
+                    {% endif %}
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title">{{ category.name }}</h5>
+                        <p class="card-text text-muted flex-grow-1">{{ category.description|truncatewords:15 }}</p>
+                        <a href="{{ category.get_absolute_url }}" class="btn category-btn text-white mt-auto">
+                            <i class="fas fa-arrow-right me-2"></i>Explore
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Enhanced Featured Products -->
+    {% if featured_products %}
+    <div class="container mb-5">
+        <div class="text-center mb-5 fade-in">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="text-muted">Hand-picked products just for you</p>
+        </div>
+        <div class="row">
+            {% for product in featured_products %}
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 fade-in">
+                <div class="product-card card h-100 position-relative">
+                    {% if product.discount_price %}
+                        <div class="discount-badge">{{ product.get_discount_percentage }}% OFF</div>
+                    {% endif %}
+                    <a href="{{ product.get_absolute_url }}" class="text-decoration-none">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title text-dark">{{ product.name|truncatechars:45 }}</h6>
+                        <div class="mb-3">
+                            {% if product.discount_price %}
+                                <span class="price-original">KSh {{ product.price }}</span>
+                                <span class="price-discount">KSh {{ product.discount_price }}</span>
+                            {% else %}
+                                <span class="fw-bold text-primary" style="font-size: 1.1rem;">KSh {{ product.price }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="{{ product.get_absolute_url }}" class="btn btn-outline-primary flex-grow-1">
+                                <i class="fas fa-eye me-1"></i>View
+                            </a>
+                            <button class="btn btn-primary" onclick="addToCart({{ product.id }})">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center fade-in">
+            <a href="{% url 'products:product_list' %}" class="btn view-all-btn text-white">
+                <i class="fas fa-th-large me-2"></i>View All Products
+            </a>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Newsletter Section -->
+    <div class="newsletter-section">
+        <div class="container">
+            <div class="fade-in">
+                <h3 class="newsletter-title">Stay Updated</h3>
+                <p class="mb-4">Get the latest deals and offers delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Fade in animation on scroll
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Add to cart function (placeholder)
+function addToCart(productId) {
+    // Add your cart functionality here
+    console.log('Added product ' + productId + ' to cart');
+    // You can show a toast notification or update cart count
+}
+
+// Event listeners
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+
+// Newsletter form submission
+document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your newsletter subscription logic here
+    alert('Thank you for subscribing!');
+});
+</script>
+{% endblock %}

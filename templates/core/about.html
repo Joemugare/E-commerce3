@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us - TransDigital System{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    <!-- Logo Section -->
+    <div class="text-center mb-5">
+        <img src="{% static 'images/tg-logo.png' %}" 
+             alt="TransDigital System Company Logo" 
+             class="img-fluid" 
+             style="max-height: 120px;">
+    </div>
+
+    <!-- About Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="{% static 'images/Patient Care Essentials.jpeg' %}" 
+                 alt="Patient Care Essentials supplied by TransDigital System" 
+                 class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="fw-bold mb-4">
+                About <span class="text-primary">TransDigital System</span>
+            </h1>
+            <p class="lead text-muted">
+                At TransDigital System, we are committed to advancing healthcare through innovative and reliable hospital products. 
+                With a strong focus on quality, safety, and performance, we partner with medical institutions to ensure they have 
+                the tools and equipment needed to deliver the highest standard of patient care.
+            </p>
+            <p>
+                From diagnostic devices and patient monitoring systems to surgical instruments and hospital furniture, 
+                our solutions are carefully selected to meet international standards and the evolving needs of healthcare providers.
+            </p>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row text-center mb-5">
+        <div class="col-md-4">
+            <div class="p-4 border rounded shadow-sm h-100">
+                <i class="bi bi-heart-pulse display-4 text-primary mb-3"></i>
+                <h5>Medical Excellence</h5>
+                <p class="text-muted">Supplying advanced hospital equipment that supports life-saving care.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 border rounded shadow-sm h-100">
+                <i class="bi bi-hospital display-4 text-primary mb-3"></i>
+                <h5>Trusted by Healthcare Providers</h5>
+                <p class="text-muted">Partnering with hospitals, clinics, and laboratories nationwide.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 border rounded shadow-sm h-100">
+                <i class="bi bi-shield-check display-4 text-primary mb-3"></i>
+                <h5>Quality & Safety</h5>
+                <p class="text-muted">Products meet global health standards for safety and reliability.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission Statement -->
+    <div class="bg-light p-5 rounded text-center">
+        <h2 class="fw-bold">Our Mission</h2>
+        <p class="lead text-muted mb-4">
+            To empower healthcare providers with dependable hospital products and innovative medical solutions 
+            that enhance patient outcomes and transform healthcare delivery.
+        </p>
+        <a href="{% url 'products:product_list' %}" class="btn btn-primary btn-lg">
+            Explore Our Products
+        </a>
+    </div>
+
+</div>
+{% endblock %}

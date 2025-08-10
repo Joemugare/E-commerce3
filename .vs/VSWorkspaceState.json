@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cart\\migrations",
+    "\\core\\__pycache__",
+    "\\orders\\migrations",
+    "\\products\\__pycache__",
+    "\\templates",
+    "\\templates\\cart",
+    "\\templates\\core",
+    "\\templates\\orders",
+    "\\templates\\products"
+  ],
+  "SelectedNode": "\\templates\\orders\\checkout.html",
+  "PreviewInSolutionExplorer": false
+}
