@@ -2,7 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\cart\\migrations",
-    "\\core\\__pycache__",
     "\\orders\\migrations",
     "\\products\\__pycache__",
     "\\templates",
@@ -11,6 +10,6 @@
     "\\templates\\orders",
     "\\templates\\products"
   ],
-  "SelectedNode": "\\templates\\orders\\checkout.html",
+  "SelectedNode": "\\templates\\cart\\detail.html",
   "PreviewInSolutionExplorer": false
 }

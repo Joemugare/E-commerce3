@@ -25,7 +25,11 @@ class Cart:
             self.cart[product_id]['quantity'] = quantity
         else:
             self.cart[product_id]['quantity'] += quantity
-        self.save()
+        # Remove item if quantity goes to zero or below
+        if self.cart[product_id]['quantity'] <= 0:
+            self.remove(product)
+        else:
+            self.save()
 
     def save(self):
         """Mark the session as 'modified' to make sure it gets saved"""
@@ -41,7 +45,6 @@ class Cart:
     def __iter__(self):
         """Iterate over the items in the cart and get the products from the database"""
         product_ids = self.cart.keys()
-        # Get the product objects and add them to the cart
         products = Product.objects.filter(id__in=product_ids)
         cart = self.cart.copy()
         for product in products:
@@ -61,5 +64,5 @@ class Cart:
 
     def clear(self):
         """Remove cart from session"""
-        del self.session[settings.CART_SESSION_ID]
+        self.session.pop(settings.CART_SESSION_ID, None)  # safer than del
         self.save()

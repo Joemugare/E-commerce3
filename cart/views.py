@@ -6,6 +6,11 @@ from products.models import Product
 from .cart import Cart
 
 
+def is_ajax(request):
+    """Check if request was made via AJAX (Django 4+ compatible)"""
+    return request.headers.get('x-requested-with') == 'XMLHttpRequest'
+
+
 def cart_detail(request):
     """Display cart contents"""
     cart = Cart(request)
@@ -21,7 +26,7 @@ def cart_add(request, product_id):
     
     cart.add(product=product, quantity=quantity, override_quantity=False)
     
-    if request.is_ajax():
+    if is_ajax(request):
         return JsonResponse({
             'success': True,
             'cart_total_items': len(cart),
@@ -39,7 +44,7 @@ def cart_remove(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product)
     
-    if request.is_ajax():
+    if is_ajax(request):
         return JsonResponse({
             'success': True,
             'cart_total_items': len(cart),
@@ -64,7 +69,7 @@ def cart_update(request, product_id):
         cart.remove(product)
         message = f'{product.name} removed from cart'
     
-    if request.is_ajax():
+    if is_ajax(request):
         return JsonResponse({
             'success': True,
             'cart_total_items': len(cart),
@@ -80,7 +85,7 @@ def cart_clear(request):
     cart = Cart(request)
     cart.clear()
     
-    if request.is_ajax():
+    if is_ajax(request):
         return JsonResponse({
             'success': True,
             'message': 'Cart cleared'
@@ -88,3 +93,11 @@ def cart_clear(request):
     
     messages.success(request, 'Cart cleared')
     return redirect('cart:cart_detail')
+
+def cart_detail(request):
+    cart = Cart(request)
+    context = {
+        'cart': cart,
+        'cart_total_price': cart.get_total_price(),
+    }
+    return render(request, 'cart/detail.html', context)

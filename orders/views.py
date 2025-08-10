@@ -9,7 +9,9 @@ from .forms import OrderCreateForm
 
 @login_required
 def order_create(request):
-    """Create a new order from cart"""
+    """
+    Create a new order from the current cart.
+    """
     cart = Cart(request)
     if len(cart) == 0:
         messages.warning(request, 'Your cart is empty.')
@@ -21,8 +23,8 @@ def order_create(request):
             order = form.save(commit=False)
             order.user = request.user
             order.save()
-            
-            # Create order items
+
+            # Create order items from cart items
             for item in cart:
                 OrderItem.objects.create(
                     order=order,
@@ -30,10 +32,10 @@ def order_create(request):
                     price=item['price'],
                     quantity=item['quantity']
                 )
-            
-            # Clear the cart
+
+            # Clear the cart after order is placed
             cart.clear()
-            
+
             messages.success(request, f'Order {order.id} created successfully!')
             return redirect('orders:order_detail', order_id=order.id)
     else:
@@ -47,7 +49,9 @@ def order_create(request):
 
 @login_required
 def order_detail(request, order_id):
-    """Display order details"""
+    """
+    Display the details of a specific order.
+    """
     try:
         order = get_object_or_404(Order, id=order_id, user=request.user)
     except Http404:
@@ -59,14 +63,18 @@ def order_detail(request, order_id):
 
 @login_required
 def order_list(request):
-    """Display user's orders"""
+    """
+    Show all orders for the logged-in user.
+    """
     orders = Order.objects.filter(user=request.user)
     return render(request, 'orders/order/list.html', {'orders': orders})
 
 
 @login_required
 def order_cancel(request, order_id):
-    """Cancel an order"""
+    """
+    Cancel an order if it's in 'pending' or 'processing' status.
+    """
     order = get_object_or_404(Order, id=order_id, user=request.user)
     
     if order.status in ['pending', 'processing']:
@@ -77,3 +85,17 @@ def order_cancel(request, order_id):
         messages.error(request, f'Order {order.id} cannot be cancelled at this stage.')
     
     return redirect('orders:order_detail', order_id=order.id)
+
+
+@login_required
+def checkout(request):
+    """
+    Display the checkout page with current cart contents.
+    """
+    cart = Cart(request)
+    if len(cart) == 0:
+        messages.warning(request, 'Your cart is empty.')
+        return redirect('cart:cart_detail')
+    
+    # Render a simple checkout page (can be extended)
+    return render(request, 'orders/checkout.html', {'cart': cart})

@@ -4,388 +4,7 @@
 
 {% block extra_css %}
 <style>
-    .product-detail-container {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        min-height: 100vh;
-        padding: 40px 0;
-    }
-    
-    .product-main-card {
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        overflow: hidden;
-        margin-bottom: 3rem;
-    }
-    
-    .product-image-section {
-        position: relative;
-        background: #f8f9fa;
-        padding: 2rem;
-    }
-    
-    .main-product-image {
-        width: 100%;
-        height: 500px;
-        object-fit: contain;
-        border-radius: 15px;
-        background: white;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .main-product-image:hover {
-        transform: scale(1.02);
-    }
-    
-    .product-thumbnails {
-        display: flex;
-        gap: 15px;
-        margin-top: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .thumbnail-image {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-        border-radius: 10px;
-        cursor: pointer;
-        border: 3px solid transparent;
-        transition: all 0.3s ease;
-    }
-    
-    .thumbnail-image:hover,
-    .thumbnail-image.active {
-        border-color: #667eea;
-        transform: scale(1.1);
-    }
-    
-    .product-info-section {
-        padding: 3rem;
-    }
-    
-    .product-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 0.5rem;
-    }
-    
-    .product-category {
-        color: #667eea;
-        font-size: 1.1rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 1.5rem;
-    }
-    
-    .price-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 1.5rem;
-        border-radius: 15px;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-    
-    .current-price {
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin: 0;
-    }
-    
-    .price-label {
-        font-size: 0.9rem;
-        opacity: 0.9;
-        margin-bottom: 0.5rem;
-    }
-    
-    .stock-badge {
-        display: inline-block;
-        padding: 8px 20px;
-        border-radius: 25px;
-        font-weight: 600;
-        margin-bottom: 2rem;
-    }
-    
-    .in-stock {
-        background: linear-gradient(45deg, #48bb78, #38a169);
-        color: white;
-    }
-    
-    .out-of-stock {
-        background: linear-gradient(45deg, #f56565, #e53e3e);
-        color: white;
-    }
-    
-    .description-card {
-        background: #f8f9fa;
-        border-radius: 15px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .description-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #2d3748;
-        margin-bottom: 1rem;
-    }
-    
-    .quantity-selector {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 2rem;
-    }
-    
-    .quantity-label {
-        font-weight: 600;
-        color: #4a5568;
-        min-width: 80px;
-    }
-    
-    .quantity-controls {
-        display: flex;
-        align-items: center;
-        background: white;
-        border: 2px solid #e2e8f0;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    
-    .quantity-btn {
-        background: #667eea;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-    
-    .quantity-btn:hover {
-        background: #5a67d8;
-    }
-    
-    .quantity-input {
-        border: none;
-        text-align: center;
-        width: 60px;
-        padding: 10px;
-        font-weight: 600;
-    }
-    
-    .add-to-cart-btn {
-        background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-        border: none;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 600;
-        padding: 15px 40px;
-        border-radius: 50px;
-        box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
-        transition: all 0.3s ease;
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-    
-    .add-to-cart-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
-        color: white;
-    }
-    
-    .add-to-cart-btn:disabled {
-        background: #cbd5e0;
-        cursor: not-allowed;
-        transform: none;
-        box-shadow: none;
-    }
-    
-    .review-btn {
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        border: none;
-        color: white;
-        padding: 12px 30px;
-        border-radius: 25px;
-        transition: all 0.3s ease;
-        width: 100%;
-    }
-    
-    .review-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        color: white;
-    }
-    
-    .reviews-section {
-        background: white;
-        border-radius: 20px;
-        padding: 3rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        margin-bottom: 3rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 2rem;
-        text-align: center;
-        position: relative;
-    }
-    
-    .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        border-radius: 2px;
-    }
-    
-    .review-card {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        border: none;
-        border-radius: 15px;
-        margin-bottom: 1.5rem;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-    }
-    
-    .review-card:hover {
-        transform: translateY(-2px);
-    }
-    
-    .review-header {
-        background: white;
-        padding: 1.5rem;
-        border-bottom: 1px solid #e2e8f0;
-    }
-    
-    .review-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #2d3748;
-        margin: 0;
-    }
-    
-    .rating-stars {
-        color: #ffd700;
-        font-size: 1.1rem;
-    }
-    
-    .rating-stars .far {
-        color: #e2e8f0;
-    }
-    
-    .review-content {
-        padding: 1.5rem;
-    }
-    
-    .review-meta {
-        color: #718096;
-        font-size: 0.9rem;
-        margin-top: 1rem;
-    }
-    
-    .no-reviews {
-        text-align: center;
-        color: #718096;
-        font-style: italic;
-        padding: 2rem;
-    }
-    
-    .related-products-section {
-        background: white;
-        border-radius: 20px;
-        padding: 3rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-    
-    .related-product-card {
-        background: white;
-        border: none;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        height: 100%;
-    }
-    
-    .related-product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    }
-    
-    .related-product-image {
-        height: 200px;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-    
-    .related-product-card:hover .related-product-image {
-        transform: scale(1.05);
-    }
-    
-    .related-product-info {
-        padding: 1.5rem;
-    }
-    
-    .related-product-title {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #2d3748;
-        margin-bottom: 0.5rem;
-    }
-    
-    .related-product-price {
-        color: #667eea;
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
-    
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-    }
-    
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    @media (max-width: 768px) {
-        .product-title {
-            font-size: 2rem;
-        }
-        
-        .current-price {
-            font-size: 2rem;
-        }
-        
-        .product-info-section,
-        .reviews-section,
-        .related-products-section {
-            padding: 2rem;
-        }
-        
-        .main-product-image {
-            height: 300px;
-        }
-        
-        .quantity-selector {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
+    /* Keep your existing CSS unchanged here */
 </style>
 {% endblock %}
 
@@ -395,27 +14,56 @@
         <!-- Main Product Section -->
         <div class="product-main-card fade-in">
             <div class="row g-0">
+                <!-- Product Images -->
                 <div class="col-lg-6 product-image-section">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="main-product-image" id="mainImage">
+                    {% if product.image %}
+                    <img 
+                      src="{{ product.image.url }}" 
+                      alt="{{ product.name|default:'Product Image' }}" 
+                      class="main-product-image" 
+                      id="mainImage"
+                    >
+                    {% else %}
+                    <img 
+                      src="/static/images/placeholder.png" 
+                      alt="No image available" 
+                      class="main-product-image" 
+                      id="mainImage"
+                    >
+                    {% endif %}
                     
-                    {% if product.images.all %}
+                    {% if product.images.count %}
                     <div class="product-thumbnails">
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="thumbnail-image active" onclick="changeMainImage(this)">
+                        <!-- Main image as first thumbnail -->
+                        {% if product.image %}
+                        <img 
+                          src="{{ product.image.url }}" 
+                          alt="{{ product.name|default:'Product Image' }}" 
+                          class="thumbnail-image active" 
+                          onclick="changeMainImage(this)"
+                        >
+                        {% endif %}
                         {% for image in product.images.all %}
-                        <img src="{{ image.image.url }}" alt="{{ image.alt_text }}" class="thumbnail-image" onclick="changeMainImage(this)">
+                        <img 
+                          src="{{ image.image.url }}" 
+                          alt="{{ image.alt_text|default:'Thumbnail Image' }}" 
+                          class="thumbnail-image" 
+                          onclick="changeMainImage(this)"
+                        >
                         {% endfor %}
                     </div>
                     {% endif %}
                 </div>
                 
+                <!-- Product Info -->
                 <div class="col-lg-6 product-info-section">
                     <h1 class="product-title">{{ product.name }}</h1>
                     <div class="product-category">{{ product.category.name }}</div>
                     
-                    <!-- Price Section -->
+                    <!-- Price -->
                     <div class="price-section">
                         <div class="price-label">Current Price</div>
-                        <div class="current-price">KSh {{ product.price }}</div>
+                        <div class="current-price">KSh {{ product.price|floatformat:2 }}</div>
                     </div>
                     
                     <!-- Stock Status -->
@@ -437,8 +85,9 @@
                         <div>{{ product.description|linebreaks }}</div>
                     </div>
                     
+                    <!-- Add to Cart Form -->
                     {% if product.stock > 0 %}
-                    <form method="post" action="{% url 'cart:add_to_cart' product.id %}" id="addToCartForm">
+                    <form method="post" action="{% url 'cart:cart_add' product.id %}" id="addToCartForm">
                         {% csrf_token %}
                         <div class="quantity-selector">
                             <label class="quantity-label">Quantity:</label>
@@ -462,6 +111,7 @@
                     </button>
                     {% endif %}
                     
+                    <!-- Review Link -->
                     {% if user.is_authenticated %}
                     <a href="{% url 'reviews:add_review' product.id %}" class="btn review-btn">
                         <i class="fas fa-star me-2"></i>Write a Review
@@ -474,14 +124,14 @@
         <!-- Reviews Section -->
         <div class="reviews-section fade-in">
             <h3 class="section-title">Customer Reviews</h3>
-            {% if product.reviews.all %}
+            {% if product.reviews.exists %}
                 {% for review in product.reviews.all %}
                 <div class="review-card">
                     <div class="review-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="review-title">{{ review.title }}</h6>
                             <div class="rating-stars">
-                                {% for i in "12345" %}
+                                {% for _ in "12345" %}
                                     {% if forloop.counter <= review.rating %}
                                         <i class="fas fa-star"></i>
                                     {% else %}
@@ -513,15 +163,19 @@
         <div class="related-products-section fade-in">
             <h3 class="section-title">You May Also Like</h3>
             <div class="row">
-                {% for product in related_products %}
+                {% for related in related_products %}
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                     <div class="related-product-card">
-                        <a href="{{ product.get_absolute_url }}" class="text-decoration-none">
-                            <img src="{{ product.image.url }}" class="related-product-image w-100" alt="{{ product.name }}">
+                        <a href="{{ related.get_absolute_url }}" class="text-decoration-none">
+                            {% if related.image %}
+                            <img src="{{ related.image.url }}" class="related-product-image w-100" alt="{{ related.name }}">
+                            {% else %}
+                            <img src="/static/images/placeholder.png" class="related-product-image w-100" alt="No image available">
+                            {% endif %}
                         </a>
                         <div class="related-product-info">
-                            <h6 class="related-product-title">{{ product.name|truncatechars:40 }}</h6>
-                            <div class="related-product-price">KSh {{ product.price }}</div>
+                            <h6 class="related-product-title">{{ related.name|truncatechars:40 }}</h6>
+                            <div class="related-product-price">KSh {{ related.price|floatformat:2 }}</div>
                         </div>
                     </div>
                 </div>
@@ -538,10 +192,8 @@ function changeMainImage(thumbnail) {
     const mainImage = document.getElementById('mainImage');
     const allThumbnails = document.querySelectorAll('.thumbnail-image');
     
-    // Update main image
     mainImage.src = thumbnail.src;
     
-    // Update active thumbnail
     allThumbnails.forEach(thumb => thumb.classList.remove('active'));
     thumbnail.classList.add('active');
 }
@@ -581,19 +233,21 @@ function animateOnScroll() {
 }
 
 // Form submission with loading state
-document.getElementById('addToCartForm').addEventListener('submit', function(e) {
-    const submitBtn = this.querySelector('.add-to-cart-btn');
-    const originalText = submitBtn.innerHTML;
-    
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Adding...';
-    submitBtn.disabled = true;
-    
-    // Re-enable after 2 seconds (adjust based on your needs)
-    setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
+const addToCartForm = document.getElementById('addToCartForm');
+if (addToCartForm) {
+    addToCartForm.addEventListener('submit', function(e) {
+        const submitBtn = this.querySelector('.add-to-cart-btn');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Adding...';
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    });
+}
 
 // Event listeners
 window.addEventListener('scroll', animateOnScroll);

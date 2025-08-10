@@ -1,4 +1,3 @@
-# cart/models.py
 from django.db import models
 from django.contrib.auth.models import User
 from products.models import Product
@@ -12,9 +11,11 @@ class Cart(models.Model):
     def __str__(self):
         return f"Cart {self.id}"
     
+    @property
     def get_total_price(self):
-        return sum(item.get_total_price() for item in self.items.all())
+        return sum(item.get_total_price for item in self.items.all())
     
+    @property
     def get_total_items(self):
         return sum(item.quantity for item in self.items.all())
 
@@ -27,5 +28,6 @@ class CartItem(models.Model):
     def __str__(self):
         return f"{self.quantity} x {self.product.name}"
     
+    @property
     def get_total_price(self):
-        return self.product.get_price() * self.quantity
+        return self.product.price * self.quantity
