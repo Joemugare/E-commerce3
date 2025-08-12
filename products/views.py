@@ -1,14 +1,30 @@
-﻿from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from django.db.models import Q
 from .models import Category, Product
 from reviews.models import Review
 
 
-def product_list(request):
-    """Simple product list: all available products, no filters or pagination."""
+def product_list(request, category_slug=None):
+    """Display a list of products, optionally filtered by category."""
+    category = None
     products = Product.objects.filter(available=True)
-    return render(request, 'products/list.html', {'products': products})
+
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        products = products.filter(category=category)
+
+    # Pagination
+    paginator = Paginator(products, 12)  # Show 12 products per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'category': category,
+        'page_obj': page_obj,
+        'products': products,
+    }
+    return render(request, 'products/list.html', context)
 
 
 def product_detail(request, id, slug):
