@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}Products - Hospital Store{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2>Our Products</h2>
+
+    {% if products %}
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" class="card-img-top product-img" alt="{{ product.name|default:'Product Image' }}">
+                    {% else %}
+                        <img src="/static/images/placeholder.png" class="card-img-top product-img" alt="No image available">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name|truncatechars:40 }}</h5>
+                        <p class="card-text">KSh {{ product.price|floatformat:2 }}</p>
+                        
+                        {% if product.stock > 0 and product.available %}
+                            <form method="post" action="{% url 'cart:cart_add' product.id %}" class="add-to-cart-form" data-product-id="{{ product.id }}">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                            </form>
+                        {% else %}
+                            <button class="btn btn-secondary" disabled>Out of Stock</button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center">
+            <i class="fas fa-box-open fa-5x text-muted mb-3"></i>
+            <h3>No products available</h3>
+            <p>Check back later for new items!</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.product-card img.product-img {
+    width: 100%;
+    height: 250px; /* Fixed height */
+    object-fit: cover; /* Keeps aspect ratio, crops overflow */
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script>
+// Helper function for CSRF token
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+            cookie = cookie.trim();
+            if (cookie.startsWith(name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const forms = document.querySelectorAll('.add-to-cart-form');
+
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.add-to-cart-btn');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Adding...';
+            btn.disabled = true;
+
+            const formData = new FormData(this);
+            const csrfToken = getCookie('csrftoken');
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRFToken': csrfToken
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    btn.innerHTML = '<i class="fas fa-check me-2"></i>Added!';
+                    const cartCountEl = document.querySelector('.badge.rounded-pill.bg-danger');
+                    if (cartCountEl) {
+                        cartCountEl.textContent = data.cart_count;
+                        cartCountEl.parentElement.style.display = data.cart_count > 0 ? 'block' : 'none';
+                    }
+                } else {
+                    btn.innerHTML = 'Add to Cart';
+                    alert(data.message || 'Failed to add item to cart');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.innerHTML = 'Add to Cart';
+                alert('An error occurred. Please try again.');
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    btn.innerHTML = 'Add to Cart';
+                    btn.disabled = false;
+                }, 2000);
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

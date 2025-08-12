@@ -1,0 +1,1518 @@
+INFO 2025-08-12 14:26:30,642 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 14:27:02,008 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 14:27:03,819 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 14:27:17,654 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\cart.py changed, reloading.
+INFO 2025-08-12 14:27:18,967 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-12 14:29:25,407 log Internal Server Error: /products/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 44, in product_list
+    return render(request, 'products/product_list.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 586, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 67: 'block'. Looking for one of: endblock.
+WARNING 2025-08-12 14:39:01,921 log Not Found: /test
+INFO 2025-08-12 14:39:36,886 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py changed, reloading.
+INFO 2025-08-12 14:39:38,105 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 14:39:41,299 log Not Found: /test
+WARNING 2025-08-12 14:39:44,896 log Not Found: /test
+INFO 2025-08-12 14:40:50,674 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\urls.py changed, reloading.
+INFO 2025-08-12 14:40:51,831 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 14:40:56,081 log Not Found: /test
+WARNING 2025-08-12 14:40:57,212 log Not Found: /test
+WARNING 2025-08-12 14:40:58,289 log Not Found: /test
+INFO 2025-08-12 14:42:43,118 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\urls.py changed, reloading.
+INFO 2025-08-12 14:42:44,415 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 14:42:46,634 log Not Found: /test
+INFO 2025-08-12 14:43:17,673 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\urls.py changed, reloading.
+INFO 2025-08-12 14:43:18,911 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 14:43:24,113 log Not Found: /test
+INFO 2025-08-12 14:44:52,623 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\ecommerce\settings.py changed, reloading.
+INFO 2025-08-12 14:44:53,927 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 14:44:56,756 log Not Found: /test
+WARNING 2025-08-12 14:44:57,939 log Not Found: /test
+INFO 2025-08-12 14:46:44,600 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 14:46:50,028 log Not Found: /test
+WARNING 2025-08-12 14:46:51,211 log Not Found: /test
+ERROR 2025-08-12 14:47:27,449 log Internal Server Error: /products/test/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 113, in test_cart
+    return render(request, 'test.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: test.html
+INFO 2025-08-12 14:48:10,066 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py changed, reloading.
+INFO 2025-08-12 14:48:11,348 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 14:50:37,559 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-12 14:52:26,948 log Internal Server Error: /products/test/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 113, in test_cart
+    return render(request, 'products/test.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cart_add' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/add/(?P<product_id>[0-9]+)/\\Z']
+INFO 2025-08-12 14:54:03,056 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py changed, reloading.
+INFO 2025-08-12 14:54:04,259 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 14:54:13,448 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Data: <QueryDict: {'csrfmiddlewaretoken': ['5bBJSMUn8dGAmXZtcjhQpiDLw2nVYGC01FSUwQgFTQBgOv3XYWpifEaonCiKy4Lg'], 'quantity': ['1']}>
+DEBUG 2025-08-12 14:54:13,454 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 14:54:13,458 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 14:54:13,469 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 14:54:13,472 views Cart after add: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 14:54:13,493 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 14:54:13,496 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 14:54:13,637 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 14:55:16,765 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\cart.py changed, reloading.
+INFO 2025-08-12 14:55:18,221 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 14:55:44,805 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 14:55:44,805 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 14:55:44,938 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 14:57:31,982 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 14:57:33,190 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 14:57:35,931 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 14:57:35,947 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 14:57:36,146 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+DEBUG 2025-08-12 14:57:38,261 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 14:57:38,296 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 14:57:38,429 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 14:58:45,340 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\cart.py changed, reloading.
+INFO 2025-08-12 14:58:47,475 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 14:59:00,303 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 14:59:01,695 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 14:59:05,526 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 14:59:05,526 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 14:59:05,676 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+DEBUG 2025-08-12 14:59:08,257 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 14:59:08,273 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 14:59:08,406 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 15:00:12,948 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 15:00:14,214 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 15:00:17,543 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:00:17,557 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 15:00:17,656 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+DEBUG 2025-08-12 15:00:20,157 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:00:20,158 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 15:00:20,244 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 15:00:33,438 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 15:00:38,184 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:00:38,191 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 15:00:38,335 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 15:00:57,011 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Data: <QueryDict: {'csrfmiddlewaretoken': ['GT8aV4SLv4PrBIY7FYgc1kf0voFhlsFUCnplz8e3gHK73g2BrBoERGMDmYA6VQOa'], 'quantity': ['1']}>
+DEBUG 2025-08-12 15:00:57,032 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:00:57,050 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:00:57,050 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 2, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:00:57,050 views Cart after add: {'4': {'quantity': 2, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:00:57,114 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 2, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:00:57,130 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 2, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 15:00:57,205 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 15:03:31,228 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 15:03:32,473 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 15:03:39,215 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 2, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:03:39,215 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 2, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 15:03:39,325 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+ERROR 2025-08-12 15:06:38,624 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 586, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 51: 'block'. Looking for one of: endblock.
+INFO 2025-08-12 15:08:38,971 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Data: <QueryDict: {'csrfmiddlewaretoken': ['NvSNKzPtYZzu570BuoIxn0tYQNx7BSvmJZ9YoDbLJCuaxF45g1QZdm0BHnsWbgEC'], 'quantity': ['1']}>
+DEBUG 2025-08-12 15:08:38,975 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 2, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:08:38,979 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:08:38,984 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 3, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:08:38,985 views Cart after add: {'4': {'quantity': 3, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:08:39,008 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 3, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:08:39,009 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g, Cart: {'4': {'quantity': 3, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-12 15:08:39,064 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 15:11:58,014 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 15:11:59,249 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 15:12:04,514 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 3, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:12:04,514 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:12:04,581 views Critical error in cart_detail: Reverse for 'cart_update' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/update/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2025-08-12 15:12:40,213 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 586, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 51: 'block'. Looking for one of: endblock.
+INFO 2025-08-12 15:12:57,315 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:12:57,321 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:12:57,326 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:12:57,327 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:12:57,355 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:12:57,357 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:12:57,366 views Critical error in cart_detail: Reverse for 'cart_update' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/update/(?P<product_id>[0-9]+)/\\Z']
+DEBUG 2025-08-12 15:13:12,697 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 15:13:12,702 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:14:39,233 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 15:14:40,483 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 15:15:43,571 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 15:15:44,696 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 15:16:01,190 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:16:01,213 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:16:01,256 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:16:01,258 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:16:01,295 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:16:01,295 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:16:01,309 views Critical error in cart_detail: Reverse for 'cart_update' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/update/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2025-08-12 15:20:56,872 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 586, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 51: 'block'. Looking for one of: endblock.
+ERROR 2025-08-12 15:23:21,585 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extra_css' appears more than once
+ERROR 2025-08-12 15:24:28,002 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extra_css' appears more than once
+ERROR 2025-08-12 15:25:27,895 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 222, in do_block
+    raise TemplateSyntaxError("'%s' tag takes only one argument" % bits[0])
+django.template.exceptions.TemplateSyntaxError: 'block' tag takes only one argument
+ERROR 2025-08-12 15:25:30,560 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 222, in do_block
+    raise TemplateSyntaxError("'%s' tag takes only one argument" % bits[0])
+django.template.exceptions.TemplateSyntaxError: 'block' tag takes only one argument
+ERROR 2025-08-12 15:26:59,340 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extra_css' appears more than once
+ERROR 2025-08-12 15:27:09,256 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extra_css' appears more than once
+INFO 2025-08-12 15:30:23,483 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-12 15:30:28,395 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extra_css' appears more than once
+ERROR 2025-08-12 15:34:05,766 log Internal Server Error: /products/4/biohazard-bags-red-yellow-black/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py", line 74, in product_detail
+    return render(request, 'products/product_detail.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 23, in get_template
+    contents = self.get_contents(origin)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 26, in get_contents
+    return origin.loader.get_contents(origin)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\filesystem.py", line 23, in get_contents
+    return fp.read()
+           ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x96 in position 123: invalid start byte
+DEBUG 2025-08-12 15:36:16,971 proactor_events Using proactor: IocpProactor
+DEBUG 2025-08-12 15:36:24,318 proactor_events Using proactor: IocpProactor
+INFO 2025-08-12 15:40:55,638 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:40:55,643 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:40:55,646 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:40:55,648 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:41:00,315 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:41:00,317 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:41:00,331 views Critical error in cart_detail: Reverse for 'cart_update' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/update/(?P<product_id>[0-9]+)/\\Z']
+DEBUG 2025-08-12 15:41:04,259 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 15:41:04,269 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:41:27,701 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:41:27,704 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:41:27,706 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:41:27,708 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:41:31,683 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:41:31,684 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:41:31,694 views Critical error in cart_detail: Reverse for 'cart_update' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/update/(?P<product_id>[0-9]+)/\\Z']
+INFO 2025-08-12 15:45:03,035 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 15:45:04,437 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 15:45:07,143 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 15:45:07,143 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:45:25,495 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:45:25,500 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:45:25,503 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:45:25,503 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:45:30,526 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:45:30,529 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:45:30,541 views Critical error in cart_detail: Reverse for 'cart_update' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/update/(?P<product_id>[0-9]+)/\\Z']
+DEBUG 2025-08-12 15:45:34,006 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 15:45:34,007 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:45:56,230 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 15:46:38,996 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:46:39,000 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:46:39,002 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:46:39,004 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:46:45,228 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:46:45,233 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:46:45,248 views Critical error in cart_detail: Reverse for 'cart_update' with arguments '('',)' not found. 1 pattern(s) tried: ['cart/update/(?P<product_id>[0-9]+)/\\Z']
+DEBUG 2025-08-12 15:49:10,848 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 15:49:10,850 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:49:22,768 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:49:22,774 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:49:22,783 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 15:49:22,784 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:49:31,826 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:49:31,836 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+ERROR 2025-08-12 15:49:31,922 log Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-12 15:50:41,116 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\views.py changed, reloading.
+INFO 2025-08-12 15:50:42,586 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 15:50:59,671 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\cart\cart.py changed, reloading.
+INFO 2025-08-12 15:51:00,991 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-12 15:51:14,839 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 15:51:14,840 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:51:19,982 views Removing product 4 from cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:51:19,986 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 15:51:19,988 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:51:20,041 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 15:51:20,045 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:52:03,293 views Adding product 12 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:52:03,298 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:52:03,300 cart Adding product 12 with quantity 1, override: False
+DEBUG 2025-08-12 15:52:03,309 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-12 15:52:07,234 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-12 15:52:07,235 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:52:14,049 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-12 15:52:14,050 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:52:19,127 views Removing product 12 from cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 15:52:19,160 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-12 15:52:19,163 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 15:52:19,197 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 15:52:19,197 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 15:55:32,262 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 15:57:35,395 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-12 15:58:59,827 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-12 16:03:01,918 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py changed, reloading.
+INFO 2025-08-12 16:03:03,333 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 16:05:43,869 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py changed, reloading.
+INFO 2025-08-12 16:05:45,347 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 16:06:55,892 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\Ecommerce\django-ecommerce\products\views.py changed, reloading.
+INFO 2025-08-12 16:06:57,515 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-12 16:08:15,980 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-12 16:09:48,313 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-12 16:09:53,978 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 16:09:53,983 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 16:09:53,985 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 16:09:53,987 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 16:09:59,635 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 16:09:59,637 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 16:10:03,801 views Removing product 4 from cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 16:10:03,805 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 16:10:03,812 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 16:10:03,839 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 16:10:03,840 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 16:10:22,872 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 16:10:22,876 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 16:10:22,880 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 16:10:22,881 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 16:10:25,927 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 16:10:25,929 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 16:10:29,741 views Removing product 4 from cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 16:10:29,747 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 16:10:29,748 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 16:10:29,774 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 16:10:29,779 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 16:12:03,519 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 16:12:03,523 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 16:12:03,525 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-12 16:12:03,526 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 16:12:07,358 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-12 16:12:07,366 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 16:12:09,390 views Removing product 4 from cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-12 16:12:09,404 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'quantity': 1, 'price': '2100.00', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-12 16:12:09,407 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-12 16:12:09,472 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-12 16:12:09,472 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
