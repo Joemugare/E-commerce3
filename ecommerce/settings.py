@@ -9,7 +9,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'e-commerce3-3o8o.onrender.com'
+    'e-commerce3-3o8o.onrender.com',
+    'transdigitalsystem.it.com'
 ]
 
 INSTALLED_APPS = [
@@ -161,5 +162,6 @@ LOGGING = {
         },
     },
 }
+
 
 APPEND_SLASH = True
