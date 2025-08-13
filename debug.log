@@ -2470,3 +2470,31 @@ INFO 2025-08-13 16:08:11,264 views Order #9 cancelled by user 1, stock restored
 DEBUG 2025-08-13 16:08:11,323 views User 1 accessing order #9
 INFO 2025-08-13 16:08:30,289 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
 INFO 2025-08-13 16:08:31,381 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 16:19:29,208 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 16:19:39,152 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 16:19:58,600 views Adding product 4 to cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:19:58,605 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 16:19:58,606 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-13 16:19:58,614 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-13 16:20:00,669 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:20:00,672 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 16:20:03,068 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 16:20:10,414 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 16:20:10,438 cart Cleared cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 16:20:10,443 views Order #10 created successfully for user 1 with 1 items
+DEBUG 2025-08-13 16:20:10,505 views User 1 accessing order #10
+INFO 2025-08-13 16:20:18,997 views Order #10 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:20:19,044 views User 1 accessing order #10
+INFO 2025-08-13 16:30:08,652 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 16:30:13,056 views User 1 accessing order #10
+DEBUG 2025-08-13 16:30:18,657 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 16:30:18,658 views User 1 attempted to create order with empty cart
+INFO 2025-08-13 16:30:18,691 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:30:18,691 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 16:30:34,506 views Adding product 4 to cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:30:34,507 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 16:30:34,509 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-13 16:30:34,511 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-13 16:30:35,865 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:30:35,868 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 16:30:39,265 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
