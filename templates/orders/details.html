@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Order #{{ order.id }} - Hospital Store{% endblock %}
+
+{% block extra_css %}
+<style>
+    .order-detail-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.3s ease;
+    }
+    .order-detail-container:hover {
+        box-shadow: var(--shadow-xl);
+        transform: translateY(-5px);
+    }
+    .order-table {
+        margin-top: 2rem;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .order-table th, .order-table td {
+        vertical-align: middle;
+        border: 1px solid var(--border-color);
+    }
+    .order-table th {
+        background: var(--gradient-primary);
+        color: white;
+        font-weight: 600;
+    }
+    .order-table td {
+        background: white;
+    }
+    .btn-cancel-order {
+        background: var(--danger-color);
+        border: none;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+    .btn-cancel-order:hover {
+        transform: scale(1.05);
+        box-shadow: var(--shadow-md);
+    }
+    .order-status {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+        font-weight: 500;
+    }
+    .status-pending {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--warning-color);
+    }
+    .status-processing {
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--primary-color);
+    }
+    .status-shipped {
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--accent-color);
+    }
+    .status-delivered {
+        background: rgba(16, 185, 129, 0.2);
+        color: var(--accent-color);
+    }
+    .status-cancelled {
+        background: rgba(239, 68, 68, 0.1);
+        color: var(--danger-color);
+    }
+    @media (max-width: 576px) {
+        .order-detail-container {
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .order-table {
+            font-size: 0.9rem;
+        }
+        .btn-cancel-order {
+            width: 100%;
+            padding: 0.75rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="order-detail-container glass-card">
+        <h1 class="mb-4 text-center" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+            <i class="fas fa-file-invoice me-2" aria-hidden="true"></i>Order #{{ order.id }}
+        </h1>
+
+        <div class="mb-4">
+            <h3 class="mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 500;">Order Details</h3>
+            <p><strong>Date:</strong> {{ order.created_at|date:"F d, Y H:i" }}</p>
+            <p><strong>Status:</strong> <span class="order-status status-{{ order.status|lower }}">{{ order.status|title }}</span></p>
+            <p><strong>Total:</strong> KSh {{ order.get_total_cost|floatformat:2 }}</p>
+        </div>
+
+        <h3 class="mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 500;">Items</h3>
+        <div class="table-responsive order-table">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in order.items.all %}
+                        <tr>
+                            <td>{{ item.product.name }} ({{ item.product.get_average_rating }} stars)</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>KSh {{ item.price|floatformat:2 }}</td>
+                            <td>KSh {{ item.get_cost|floatformat:2 }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4" class="text-muted">No items in this order.</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="3" class="text-end fw-bold">Total:</td>
+                        <td class="fw-bold">KSh {{ order.get_total_cost|floatformat:2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        {% if order.status in 'pending,processing' %}
+            <div class="text-center mt-4">
+                <form action="{% url 'orders:order_cancel' order.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-cancel-order">
+                        <i class="fas fa-times-circle me-2" aria-hidden="true"></i>Cancel Order
+                    </button>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

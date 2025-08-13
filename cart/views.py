@@ -11,17 +11,18 @@ from .cart import Cart
 logger = logging.getLogger(__name__)
 
 class DecimalEncoder(json.JSONEncoder):
-    """Custom JSON encoder to handle Decimal objects"""
+    """Custom JSON encoder to handle Decimal objects."""
     def default(self, obj):
         if isinstance(obj, Decimal):
             return float(obj)
         return super().default(obj)
 
 def is_ajax(request):
+    """Check if the request is an AJAX request."""
     return request.headers.get('x-requested-with') == 'XMLHttpRequest'
 
 def convert_decimals_to_float(data):
-    """Recursively convert Decimal objects to float in data structures"""
+    """Recursively convert Decimal objects to float in data structures."""
     if isinstance(data, Decimal):
         return float(data)
     elif isinstance(data, dict):
@@ -31,12 +32,12 @@ def convert_decimals_to_float(data):
     return data
 
 def safe_cart_operation(func):
-    """Decorator to safely handle cart operations"""
+    """Decorator to safely handle cart operations with error handling."""
     def wrapper(request, *args, **kwargs):
         try:
             return func(request, *args, **kwargs)
         except Exception as e:
-            logger.error(f"Cart operation error: {str(e)}")
+            logger.error(f"Cart operation error for user {request.user.id}: {str(e)}")
             if is_ajax(request):
                 return JsonResponse({
                     'success': False,
@@ -50,56 +51,48 @@ def safe_cart_operation(func):
 @require_POST
 @safe_cart_operation
 def cart_add(request, product_id):
-    logger.info(f"Adding product {product_id} to cart. Session ID: {request.session.session_key}")
+    """
+    Add a product to the cart, supporting both AJAX and non-AJAX requests.
+    """
+    logger.info(f"Adding product {product_id} to cart for user {request.user.id}. Session: {request.session.session_key}")
+    cart = Cart(request)
+    product = get_object_or_404(Product, id=product_id, available=True)
     try:
-        cart = Cart(request)
-        product = get_object_or_404(Product, id=product_id, available=True)
-        quantity = request.POST.get('quantity', '1')
-        try:
-            quantity = int(quantity)
-            if quantity <= 0:
-                raise ValueError("Quantity must be positive")
-            if quantity > product.stock:
-                raise ValueError(f"Requested quantity ({quantity}) exceeds available stock ({product.stock})")
-        except ValueError as e:
-            logger.warning(f"Invalid quantity for product {product.id}: {str(e)}")
-            if is_ajax(request):
-                return JsonResponse({
-                    'success': False,
-                    'message': str(e)
-                }, status=400)
-            messages.error(request, str(e))
-            return redirect('products:product_detail', id=product.id, slug=product.slug)
+        quantity = int(request.POST.get('quantity', 1))
+        if quantity <= 0:
+            raise ValueError("Quantity must be positive")
+        if quantity > product.stock:
+            raise ValueError(f"Requested quantity ({quantity}) exceeds available stock ({product.stock})")
         cart.add(product=product, quantity=quantity, override_quantity=False)
         response_data = {
             'success': True,
-            'cart_count': int(cart.get_total_items()),
+            'cart_count': cart.get_total_items(),
             'message': f'{product.name} added to cart'
         }
         if is_ajax(request):
             return JsonResponse(response_data)
         messages.success(request, f'{product.name} added to cart')
         return redirect('cart:cart_detail')
-    except Exception as e:
-        logger.error(f"Error adding product {product_id}: {str(e)}")
+    except ValueError as e:
+        logger.warning(f"Invalid input for product {product_id} by user {request.user.id}: {str(e)}")
         if is_ajax(request):
-            return JsonResponse({
-                'success': False,
-                'message': f'Error adding to cart: {str(e)}'
-            }, status=500)
-        messages.error(request, f'Error adding to cart: {str(e)}')
-        return redirect('products:product_detail', id=product_id, slug=Product.objects.get(id=product_id).slug)
+            return JsonResponse({'success': False, 'message': str(e)}, status=400)
+        messages.error(request, str(e))
+        return redirect('products:product_detail', id=product.id, slug=product.slug)
 
 @require_POST
 @safe_cart_operation
 def cart_remove(request, product_id):
-    logger.info(f"Removing product {product_id} from cart. Session ID: {request.session.session_key}")
+    """
+    Remove a product from the cart.
+    """
+    logger.info(f"Removing product {product_id} from cart for user {request.user.id}")
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
-    cart.remove(product)
+    cart.remove(product_id)
     response_data = {
         'success': True,
-        'cart_count': int(cart.get_total_items()),
+        'cart_count': cart.get_total_items(),
         'message': f'{product.name} removed from cart'
     }
     if is_ajax(request):
@@ -110,38 +103,51 @@ def cart_remove(request, product_id):
 @require_POST
 @safe_cart_operation
 def cart_update(request, product_id):
-    logger.info(f"Updating product {product_id}")
+    """
+    Update the quantity of a product in the cart.
+    """
+    logger.info(f"Updating product {product_id} quantity for user {request.user.id}")
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
-    quantity = int(request.POST.get('quantity', 1))
-    if quantity > product.stock:
-        logger.warning(f"Invalid quantity {quantity} for product {product.id}. Stock: {product.stock}")
+    try:
+        quantity = int(request.POST.get('quantity', 1))
+        if quantity > product.stock:
+            logger.warning(f"Invalid quantity {quantity} for product {product.id}. Stock: {product.stock}")
+            if is_ajax(request):
+                return JsonResponse({
+                    'success': False,
+                    'message': f'Cannot update to {quantity} of {product.name}. Only {product.stock} in stock.'
+                }, status=400)
+            messages.error(request, f'Cannot update to {quantity} of {product.name}. Only {product.stock} in stock.')
+            return redirect('cart:cart_detail')
+        if quantity > 0:
+            cart.add(product=product, quantity=quantity, override_quantity=True)
+            message = f'{product.name} quantity updated'
+        else:
+            cart.remove(product_id)
+            message = f'{product.name} removed from cart'
+        response_data = {
+            'success': True,
+            'cart_count': cart.get_total_items(),
+            'message': message
+        }
         if is_ajax(request):
-            return JsonResponse({
-                'success': False,
-                'message': f'Cannot update to {quantity} of {product.name}. Only {product.stock} in stock.'
-            }, status=400)
-        messages.error(request, f'Cannot update to {quantity} of {product.name}. Only {product.stock} in stock.')
+            return JsonResponse(response_data)
+        messages.success(request, message)
         return redirect('cart:cart_detail')
-    if quantity > 0:
-        cart.add(product=product, quantity=quantity, override_quantity=True)
-        message = f'{product.name} quantity updated'
-    else:
-        cart.remove(product)
-        message = f'{product.name} removed from cart'
-    response_data = {
-        'success': True,
-        'cart_count': int(cart.get_total_items()),
-        'message': message
-    }
-    if is_ajax(request):
-        return JsonResponse(response_data)
-    messages.success(request, message)
-    return redirect('cart:cart_detail')
+    except ValueError as e:
+        logger.warning(f"Invalid quantity for product {product_id}: {str(e)}")
+        if is_ajax(request):
+            return JsonResponse({'success': False, 'message': str(e)}, status=400)
+        messages.error(request, str(e))
+        return redirect('cart:cart_detail')
 
 @safe_cart_operation
 def cart_clear(request):
-    logger.info(f"Clearing cart. Session ID: {request.session.session_key}")
+    """
+    Clear all items from the cart.
+    """
+    logger.info(f"Clearing cart for user {request.user.id}. Session: {request.session.session_key}")
     cart = Cart(request)
     cart.clear()
     response_data = {
@@ -156,55 +162,17 @@ def cart_clear(request):
 
 @safe_cart_operation
 def cart_detail(request):
-    try:
-        cart = Cart(request)
-        logger.info(f"Displaying cart. Session ID: {request.session.session_key}")
-        cart_items = []
-        if hasattr(cart, 'get_cart_data_for_json'):
-            cart_items = cart.get_cart_data_for_json()
-        else:
-            for item in cart:
-                try:
-                    product_id = item.get('product_id')
-                    if not product_id:
-                        logger.error(f"Invalid cart item: {item}")
-                        continue
-                    product = Product.objects.get(id=int(product_id))
-                    if not product.available:
-                        logger.warning(f"Product {product_id} is not available, removing from cart")
-                        cart.remove(product)
-                        continue
-                    cart_items.append({
-                        'product': product,
-                        'name': item.get('name', ''),
-                        'quantity': item.get('quantity', 0),
-                        'price': float(item.get('price', 0)) if item.get('price') else 0,
-                        'total_price': float(item.get('total_price', 0)) if item.get('total_price') else 0,
-                        'image': item.get('image', ''),
-                    })
-                except Product.DoesNotExist:
-                    logger.error(f"Product {item.get('product_id')} not found, removing from cart")
-                    cart.remove(Product(id=item.get('product_id')))
-                    continue
-                except Exception as e:
-                    logger.error(f"Error processing cart item {item}: {str(e)}")
-                    continue
-        total_price = float(cart.get_total_price() or 0)
-        context = {
-            'cart': cart_items,
-            'cart_total_price': total_price,
-        }
-        if is_ajax(request):
-            return JsonResponse(convert_decimals_to_float(context), cls=DecimalEncoder)
-        return render(request, 'cart/detail.html', context)
-    except Exception as e:
-        logger.error(f"Critical error in cart_detail: {str(e)}")
-        request.session.pop('cart', None)
-        context = {
-            'cart': [],
-            'cart_total_price': 0.0,
-        }
-        if is_ajax(request):
-            return JsonResponse(convert_decimals_to_float(context), cls=DecimalEncoder)
-        messages.error(request, 'There was an error loading your cart. Your cart has been cleared.')
-        return render(request, 'cart/detail.html', context)
+    """
+    Display the cart contents, supporting both AJAX and non-AJAX requests.
+    """
+    logger.info(f"Displaying cart for user {request.user.id}. Session: {request.session.session_key}")
+    cart = Cart(request)
+    cart_items = cart.get_cart_data_for_json()  # Use get_cart_data_for_json for consistency
+    total_price = float(cart.get_total_price() or 0)
+    context = {
+        'cart': cart_items,
+        'cart_total_price': total_price,
+    }
+    if is_ajax(request):
+        return JsonResponse(convert_decimals_to_float(context), encoder=DecimalEncoder)
+    return render(request, 'cart/detail.html', context)

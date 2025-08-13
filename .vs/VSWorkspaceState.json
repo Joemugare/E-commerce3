@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cart\\migrations",
-    "\\ecommerce",
-    "\\products\\__pycache__",
-    "\\templates\\cart",
-    "\\templates\\core",
-    "\\templates\\orders",
-    "\\templates\\products"
+    "\\orders",
+    "\\templates",
+    "\\templates\\orders"
   ],
-  "SelectedNode": "\\ecommerce\\settings.py",
+  "SelectedNode": "\\orders\\views.py",
   "PreviewInSolutionExplorer": false
 }

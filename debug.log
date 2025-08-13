@@ -1516,3 +1516,957 @@ DEBUG 2025-08-12 16:12:09,404 cart Initialized cart for session 5phxrdt7xi3ro1a9
 DEBUG 2025-08-12 16:12:09,407 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
 DEBUG 2025-08-12 16:12:09,472 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
 INFO 2025-08-12 16:12:09,472 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-12 18:46:33,562 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-12 18:46:59,129 log Internal Server Error: /products/category/infection-control-hygiene/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: product_list() got an unexpected keyword argument 'category_slug'
+INFO 2025-08-12 18:48:53,626 autoreload C:\Users\ADMIN\source\repos\E-commerce3\products\views.py changed, reloading.
+INFO 2025-08-12 18:48:54,880 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 18:49:09,220 views Adding product 1 to cart. Session ID: None
+DEBUG 2025-08-12 18:49:09,220 cart Initialized cart for session None: {}
+DEBUG 2025-08-12 18:49:09,226 cart Adding product 1 with quantity 1, override: False
+DEBUG 2025-08-12 18:49:09,227 cart Saved cart for session None: {'1': {'quantity': 1, 'price': '350.00', 'name': 'Disposable Face Masks (3-ply, N95)', 'image': '/media/products/2025/08/10/Disposable_Face_Masks_3-ply_N95.jpg'}}
+DEBUG 2025-08-12 18:49:12,605 cart Initialized cart for session 9an9u1auqfjz44trsygesy8qd26g15v3: {'1': {'quantity': 1, 'price': '350.00', 'name': 'Disposable Face Masks (3-ply, N95)', 'image': '/media/products/2025/08/10/Disposable_Face_Masks_3-ply_N95.jpg'}}
+INFO 2025-08-12 18:49:12,607 views Displaying cart. Session ID: 9an9u1auqfjz44trsygesy8qd26g15v3
+INFO 2025-08-12 18:49:15,932 views Clearing cart. Session ID: 9an9u1auqfjz44trsygesy8qd26g15v3
+DEBUG 2025-08-12 18:49:15,939 cart Initialized cart for session 9an9u1auqfjz44trsygesy8qd26g15v3: {'1': {'quantity': 1, 'price': '350.00', 'name': 'Disposable Face Masks (3-ply, N95)', 'image': '/media/products/2025/08/10/Disposable_Face_Masks_3-ply_N95.jpg'}}
+DEBUG 2025-08-12 18:49:15,965 cart Initialized cart for session 9an9u1auqfjz44trsygesy8qd26g15v3: {}
+INFO 2025-08-12 18:49:15,971 views Displaying cart. Session ID: 9an9u1auqfjz44trsygesy8qd26g15v3
+INFO 2025-08-12 18:53:58,248 autoreload C:\Users\ADMIN\source\repos\E-commerce3\products\views.py changed, reloading.
+INFO 2025-08-12 18:53:59,330 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 15:02:50,828 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-13 15:03:10,036 log Not Found: /favicon.ico
+INFO 2025-08-13 15:03:18,242 views Adding product 12 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:03:18,344 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:03:18,346 cart Adding product 12 with quantity 1, override: False
+DEBUG 2025-08-13 15:03:18,347 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:03:20,316 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:03:20,329 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:03:25,033 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:03:25,304 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Source\Repos\E-commerce3\orders\views.py", line 16, in order_create
+    if len(cart) == 0:
+       ^^^^^^^^^
+TypeError: object of type 'Cart' has no len()
+INFO 2025-08-13 15:08:06,997 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:08:11,171 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:08:11,273 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 16, in order_create
+    if len(cart) == 0:
+       ^^^^^^^^^
+TypeError: object of type 'Cart' has no len()
+INFO 2025-08-13 15:13:01,754 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\cart\cart.py changed, reloading.
+INFO 2025-08-13 15:13:03,030 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:13:04,755 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:13:05,057 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, 'orders/order/create.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+DEBUG 2025-08-13 15:14:19,949 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:14:19,986 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, 'orders/order/create.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+DEBUG 2025-08-13 15:14:22,162 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:14:22,215 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, 'orders/order/create.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+DEBUG 2025-08-13 15:14:35,912 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:14:35,945 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, 'orders/order/create.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+INFO 2025-08-13 15:14:42,806 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:14:46,676 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:14:46,809 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, 'orders/order/create.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+INFO 2025-08-13 15:17:23,816 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:17:25,173 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:17:26,914 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:17:26,985 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, 'orders/order/create.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+DEBUG 2025-08-13 15:17:29,663 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:17:29,708 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, 'orders/order/create.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+INFO 2025-08-13 15:19:40,108 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:19:41,583 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:19:44,255 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:19:44,365 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, "orders/order/create.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/order/create.html
+INFO 2025-08-13 15:21:02,364 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:21:03,579 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:21:07,048 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:21:07,112 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, "order/create.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: order/create.html
+INFO 2025-08-13 15:21:30,589 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:21:31,787 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:21:34,564 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:21:34,675 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, "templates/order/create.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templates/order/create.html
+INFO 2025-08-13 15:23:13,040 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:23:14,432 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:23:15,997 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:23:16,060 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, "order/create.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: order/create.html
+DEBUG 2025-08-13 15:25:39,984 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:25:40,034 log Internal Server Error: /orders/create/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 44, in order_create
+    return render(request, "order/create.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: order/create.html
+INFO 2025-08-13 15:27:21,518 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:27:23,609 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:27:24,745 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:28:51,463 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:29:11,965 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:29:11,993 views Invalid cart item: {'product_id': '12', 'name': 'Cotton Wool', 'quantity': 1, 'price': '650.00', 'total_price': Decimal('650.00'), 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}
+ERROR 2025-08-13 15:29:12,031 views Order creation failed: Invalid cart item
+INFO 2025-08-13 15:30:16,592 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:30:18,069 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 15:31:44,485 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:31:46,323 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:31:49,610 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+WARNING 2025-08-13 15:31:49,625 views Skipping invalid cart item: {'product_id': '12', 'name': 'Cotton Wool', 'quantity': 1, 'price': '650.00', 'total_price': Decimal('650.00'), 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}
+ERROR 2025-08-13 15:31:49,626 views No valid items to create order for user 1: [{'product_id': '12', 'name': 'Cotton Wool', 'quantity': 1, 'price': '650.00', 'total_price': Decimal('650.00'), 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}]
+DEBUG 2025-08-13 15:31:49,711 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:31:49,716 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:33:27,738 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\urls.py changed, reloading.
+INFO 2025-08-13 15:33:29,707 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:33:32,160 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:33:32,186 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:33:38,170 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:33:45,980 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+WARNING 2025-08-13 15:33:46,018 views Skipping invalid cart item: {'product_id': '12', 'name': 'Cotton Wool', 'quantity': 1, 'price': '650.00', 'total_price': Decimal('650.00'), 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}
+ERROR 2025-08-13 15:33:46,024 views No valid items to create order for user 1: [{'product_id': '12', 'name': 'Cotton Wool', 'quantity': 1, 'price': '650.00', 'total_price': Decimal('650.00'), 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}]
+DEBUG 2025-08-13 15:33:46,076 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:33:46,087 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:34:17,532 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\urls.py changed, reloading.
+INFO 2025-08-13 15:34:19,628 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:34:20,761 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:34:20,762 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:34:23,691 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:34:28,769 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+WARNING 2025-08-13 15:34:28,812 views Skipping invalid cart item: {'product_id': '12', 'name': 'Cotton Wool', 'quantity': 1, 'price': '650.00', 'total_price': Decimal('650.00'), 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}
+ERROR 2025-08-13 15:34:28,815 views No valid items to create order for user 1: [{'product_id': '12', 'name': 'Cotton Wool', 'quantity': 1, 'price': '650.00', 'total_price': Decimal('650.00'), 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}]
+DEBUG 2025-08-13 15:34:28,904 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:34:28,905 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:37:37,297 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\cart\cart.py changed, reloading.
+INFO 2025-08-13 15:37:38,783 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 15:38:00,739 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:38:02,086 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:38:42,948 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:38:47,434 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'quantity': 1, 'price': '650.00', 'name': 'Cotton Wool', 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:38:47,478 views Order #4 created for user 1
+ERROR 2025-08-13 15:38:47,784 log Internal Server Error: /orders/4/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 78, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+ERROR 2025-08-13 15:40:02,206 log Internal Server Error: /orders/4/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 78, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+ERROR 2025-08-13 15:41:11,356 log Internal Server Error: /orders/4/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 78, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+ERROR 2025-08-13 15:41:14,054 log Internal Server Error: /orders/4/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 78, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+DEBUG 2025-08-13 15:41:55,773 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:41:55,798 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 15:41:55,798 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:44:38,204 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:44:40,187 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:44:42,338 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 15:44:42,349 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:44:48,176 views Adding product 12 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:44:48,181 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:44:48,186 cart Adding product 12 with quantity 1, override: False
+DEBUG 2025-08-13 15:44:48,191 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': Decimal('650.00'), 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:44:48,425 log Internal Server Error: /cart/add/12/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-13 15:44:54,575 views Adding product 12 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:44:54,580 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:44:54,583 cart Adding product 12 with quantity 1, override: False
+DEBUG 2025-08-13 15:44:54,584 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': Decimal('650.00'), 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+ERROR 2025-08-13 15:44:54,659 log Internal Server Error: /cart/add/12/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-13 15:46:55,832 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\products\models.py changed, reloading.
+INFO 2025-08-13 15:46:57,292 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 15:47:12,337 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:47:12,343 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:47:12,352 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-13 15:47:12,353 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': Decimal('2100.00'), 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-13 15:47:12,486 log Internal Server Error: /cart/add/4/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-13 15:48:19,689 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:48:19,690 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:48:19,698 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-13 15:48:19,698 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': Decimal('2100.00'), 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+ERROR 2025-08-13 15:48:19,797 log Internal Server Error: /cart/add/4/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\middleware.py", line 59, in process_response
+    request.session.save()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 123, in save
+    obj = self.create_model_instance(data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 102, in create_model_instance
+    session_data=self.encode(data),
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 124, in encode
+    return signing.dumps(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 150, in dumps
+    return TimestampSigner(key=key, salt=salt).sign_object(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 225, in sign_object
+    data = serializer().dumps(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\signing.py", line 125, in dumps
+    return json.dumps(obj, separators=(",", ":")).encode("latin-1")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+INFO 2025-08-13 15:49:04,453 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\cart\cart.py changed, reloading.
+INFO 2025-08-13 15:49:06,152 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 15:50:06,349 views Adding product 4 to cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:50:06,353 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:50:06,360 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-13 15:50:06,362 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 15:50:11,638 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-13 15:50:11,659 views Displaying cart. Session ID: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:50:15,837 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 15:50:21,579 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 15:50:21,638 cart Cleared cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:50:21,639 views Order #5 created for user 1 with 1 items
+DEBUG 2025-08-13 15:50:21,710 views User 1 accessed order #5
+ERROR 2025-08-13 15:50:21,887 log Internal Server Error: /orders/5/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 90, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+INFO 2025-08-13 15:50:51,524 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\cart\views.py changed, reloading.
+INFO 2025-08-13 15:50:54,270 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:50:55,403 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 15:50:55,405 views User 1 attempted to create order with empty cart
+INFO 2025-08-13 15:50:55,520 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:50:55,521 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 15:51:02,932 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:51:02,933 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 15:51:07,553 views Adding product 12 to cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:51:07,554 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:51:07,558 cart Adding product 12 with quantity 1, override: False
+DEBUG 2025-08-13 15:51:07,558 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 15:51:10,822 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:51:10,824 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:51:13,665 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:51:21,072 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 15:51:21,100 cart Cleared cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:51:21,105 views Order #6 created for user 1 with 1 items
+DEBUG 2025-08-13 15:51:21,167 views User 1 accessed order #6
+ERROR 2025-08-13 15:51:21,318 log Internal Server Error: /orders/6/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 90, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+DEBUG 2025-08-13 15:53:02,595 views User 1 accessed order #6
+ERROR 2025-08-13 15:53:02,648 log Internal Server Error: /orders/6/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 90, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+DEBUG 2025-08-13 15:53:04,018 views User 1 accessed order #6
+ERROR 2025-08-13 15:53:04,072 log Internal Server Error: /orders/6/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 90, in order_detail
+    return render(request, "orders/detail.html", {"order": order})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+INFO 2025-08-13 15:53:14,499 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 15:53:18,156 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 15:53:18,157 views User 1 attempted to create order with empty cart
+INFO 2025-08-13 15:53:18,248 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:53:18,259 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+INFO 2025-08-13 15:55:50,912 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 15:55:53,305 autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 15:57:01,958 views Adding product 4 to cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:57:01,959 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 15:57:01,961 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-13 15:57:01,963 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-13 15:57:05,571 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 15:57:05,572 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 15:57:08,038 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 15:57:15,062 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 15:57:15,094 cart Cleared cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 15:57:15,112 views Order #7 created for user 1 with 1 items
+DEBUG 2025-08-13 15:57:15,181 views User 1 accessing order #7
+ERROR 2025-08-13 15:57:15,184 views Failed to render orders/detail.html for order #7 by user 1: orders/detail.html
+ERROR 2025-08-13 15:57:15,343 log Internal Server Error: /orders/7/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 91, in order_detail
+    response = render(request, "orders/detail.html", {"order": order})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+DEBUG 2025-08-13 15:57:27,081 views User 1 accessing order #7
+ERROR 2025-08-13 15:57:27,087 views Failed to render orders/detail.html for order #7 by user 1: orders/detail.html
+ERROR 2025-08-13 15:57:27,127 log Internal Server Error: /orders/7/
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py", line 91, in order_detail
+    response = render(request, "orders/detail.html", {"order": order})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orders/detail.html
+INFO 2025-08-13 16:04:18,929 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 16:04:20,255 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 16:04:22,208 views User 1 accessing order #7
+ERROR 2025-08-13 16:04:22,210 views Error accessing order #7 for user 1: orders/detail.html
+ERROR 2025-08-13 16:04:22,291 views Error loading order list for user 1: Cannot resolve keyword 'created_at' into field. Choices are: address, city, created, email, first_name, id, items, last_name, paid, postal_code, status, stripe_payment_intent_id, updated, user, user_id
+INFO 2025-08-13 16:04:42,564 views Adding product 4 to cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:04:42,565 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 16:04:42,571 cart Adding product 4 with quantity 1, override: False
+DEBUG 2025-08-13 16:04:42,574 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+INFO 2025-08-13 16:04:44,378 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:04:44,380 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 16:04:46,802 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 16:04:52,501 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'4': {'product_id': '4', 'name': 'Biohazard Bags (Red, Yellow, Black)', 'price': '2100.00', 'quantity': 1, 'image': '/media/products/2025/08/10/linerred.jpg'}}
+DEBUG 2025-08-13 16:04:52,537 cart Cleared cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 16:04:52,580 views Order #8 created successfully for user 1 with 1 items
+DEBUG 2025-08-13 16:04:52,773 views User 1 accessing order #8
+ERROR 2025-08-13 16:04:52,780 views Error accessing order #8 for user 1: orders/detail.html
+ERROR 2025-08-13 16:04:52,820 views Error loading order list for user 1: Cannot resolve keyword 'created_at' into field. Choices are: address, city, created, email, first_name, id, items, last_name, paid, postal_code, status, stripe_payment_intent_id, updated, user, user_id
+INFO 2025-08-13 16:05:54,718 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 16:05:55,848 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 16:05:59,849 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:07,806 views Order #1 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:07,846 views User 1 accessing order #1
+ERROR 2025-08-13 16:06:07,851 views Error accessing order #1 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:07,890 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:12,125 views Order #2 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:12,163 views User 1 accessing order #2
+ERROR 2025-08-13 16:06:12,166 views Error accessing order #2 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:12,214 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:16,232 views Order #3 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:16,283 views User 1 accessing order #3
+ERROR 2025-08-13 16:06:16,287 views Error accessing order #3 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:16,369 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:20,176 views Order #4 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:20,234 views User 1 accessing order #4
+ERROR 2025-08-13 16:06:20,250 views Error accessing order #4 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:20,325 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:23,713 views Order #5 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:23,755 views User 1 accessing order #5
+ERROR 2025-08-13 16:06:23,759 views Error accessing order #5 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:23,819 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:26,259 views Order #6 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:26,312 views User 1 accessing order #6
+ERROR 2025-08-13 16:06:26,318 views Error accessing order #6 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:26,369 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:28,565 views Order #7 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:28,590 views User 1 accessing order #7
+ERROR 2025-08-13 16:06:28,591 views Error accessing order #7 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:28,621 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:06:30,455 views Order #8 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:06:30,491 views User 1 accessing order #8
+ERROR 2025-08-13 16:06:30,492 views Error accessing order #8 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:30,536 views User 1 accessed order list: 8 orders
+DEBUG 2025-08-13 16:06:40,060 views User 1 accessing order #4
+ERROR 2025-08-13 16:06:40,061 views Error accessing order #4 for user 1: orders/detail.html
+DEBUG 2025-08-13 16:06:40,110 views User 1 accessed order list: 8 orders
+INFO 2025-08-13 16:07:21,698 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 16:07:23,988 autoreload Watching for file changes with StatReloader
+DEBUG 2025-08-13 16:07:25,026 views User 1 accessed order list: 8 orders
+DEBUG 2025-08-13 16:07:32,522 views User 1 accessing order #8
+INFO 2025-08-13 16:07:47,577 views Adding product 12 to cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:07:47,578 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {}
+DEBUG 2025-08-13 16:07:47,581 cart Adding product 12 with quantity 1, override: False
+DEBUG 2025-08-13 16:07:47,582 cart Saved cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+INFO 2025-08-13 16:07:49,727 views Displaying cart for user 1. Session: 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+DEBUG 2025-08-13 16:07:49,728 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 16:07:53,152 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 16:08:00,021 cart Initialized cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g: {'12': {'product_id': '12', 'name': 'Cotton Wool', 'price': '650.00', 'quantity': 1, 'image': '/media/products/2025/08/10/Cotton_Wool.JPEG'}}
+DEBUG 2025-08-13 16:08:00,072 cart Cleared cart for session 5phxrdt7xi3ro1a91a1qqyhbl2lnjg5g
+INFO 2025-08-13 16:08:00,082 views Order #9 created successfully for user 1 with 1 items
+DEBUG 2025-08-13 16:08:00,147 views User 1 accessing order #9
+INFO 2025-08-13 16:08:11,264 views Order #9 cancelled by user 1, stock restored
+DEBUG 2025-08-13 16:08:11,323 views User 1 accessing order #9
+INFO 2025-08-13 16:08:30,289 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\orders\views.py changed, reloading.
+INFO 2025-08-13 16:08:31,381 autoreload Watching for file changes with StatReloader

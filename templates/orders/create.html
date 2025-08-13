@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block title %}Create Order - Hospital Store{% endblock %}
+{% block extra_css %}
+<style>
+    .order-form-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.3s ease;
+    }
+    .order-form-container:hover {
+        box-shadow: var(--shadow-xl);
+        transform: translateY(-5px);
+    }
+    .cart-table {
+        margin-top: 2rem;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .cart-table th, .cart-table td {
+        vertical-align: middle;
+        border: 1px solid var(--border-color);
+    }
+    .cart-table th {
+        background: var(--gradient-primary);
+        color: white;
+        font-weight: 600;
+    }
+    .cart-table td {
+        background: white;
+    }
+    .btn-place-order {
+        background: var(--gradient-primary);
+        border: none;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+    .btn-place-order:hover {
+        transform: scale(1.05);
+        box-shadow: var(--shadow-md);
+    }
+    .form-label {
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+    .form-control, .form-select {
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+    }
+    .form-control:focus, .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+    }
+    .cart-empty {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: var(--shadow-md);
+    }
+    @media (max-width: 576px) {
+        .order-form-container {
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .cart-table {
+            font-size: 0.9rem;
+        }
+        .btn-place-order {
+            width: 100%;
+            padding: 0.75rem;
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="order-form-container glass-card">
+        <h1 class="mb-4 text-center" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+            <i class="fas fa-cart-plus me-2" aria-hidden="true"></i>Create Your Order
+        </h1>
+        {% if cart %}
+            {% load crispy_forms_tags %}
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-place-order">
+                        <i class="fas fa-check-circle me-2" aria-hidden="true"></i>Place Order
+                    </button>
+                </div>
+            </form>
+            <h2 class="mt-5 mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 500;">
+                <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i>Cart Contents
+            </h2>
+            <div class="table-responsive cart-table">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in cart %}
+                            {% if item.product and item.quantity and item.price %}
+                                <tr>
+                                    <td>{{ item.name|default:item.product.name }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td>KSh {{ item.price|floatformat:2 }}</td>
+                                    <td>KSh {{ item.total_price|floatformat:2 }}</td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="4" class="text-muted">Invalid item (contact support)</td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                        <tr>
+                            <td colspan="3" class="text-end fw-bold">Total:</td>
+                            <td class="fw-bold">KSh {{ cart.get_total_price|floatformat:2|default:"0.00" }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="cart-empty">
+                <h3 class="mb-3">Your cart is empty</h3>
+                <p class="text-muted">Add some medical supplies to your cart to create an order.</p>
+                <a href="{% url 'products:product_list' %}" class="btn btn-outline-primary interactive">
+                    <i class="fas fa-boxes me-2" aria-hidden="true"></i>Browse Products
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% block extra_js %}
+<script>
+    (function () {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
+{% endblock %}
+{% endblock %}
