@@ -1,361 +1,673 @@
-```html
-{% extends "base.html" %}
-{% load static portfolio_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital Store - Your trusted source for quality medical supplies and equipment.">
+    <meta name="author" content="Hospital Store">
+    <title>{% block title %}Hospital Store{% endblock %}</title>
 
-{% block title %}Dashboard - CryptoTracker Pro{% endblock %}
-{% block breadcrumb %}Dashboard{% endblock %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHE671N9F1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LHE671N9F1');
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<style>
-    /* Right-align all numeric cells */
-    .price-cell {
-        text-align: right;
-    }
-    /* Right-align headers for numeric columns */
-    .portfolio-table th:nth-child(2),
-    .portfolio-table th:nth-child(3),
-    .portfolio-table th:nth-child(4),
-    .portfolio-table th:nth-child(5),
-    .portfolio-table th:nth-child(6),
-    .portfolio-table th:nth-child(7) {
-        text-align: right;
-    }
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #06b6d4;
+            --accent-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --dark-bg: #0f172a;
+            --dark-secondary: #1e293b;
+            --text-light: #f8fafc;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+        }
 
-    /* Styles for the new features */
-    .watchlist-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-    }
-    .watchlist-table th, .watchlist-table td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid var(--border-color);
-    }
-    .watchlist-table th {
-        font-size: 0.8rem;
-        color: var(--muted);
-        text-transform: uppercase;
-    }
-    .watchlist-table tr:hover {
-        background-color: var(--hover-bg);
-    }
-    .news-feed {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .news-item {
-        padding: 10px 0;
-        border-bottom: 1px solid var(--border-color);
-    }
-    .news-item:last-child {
-        border-bottom: none;
-    }
-    .news-item h5 {
-        margin: 0 0 5px 0;
-        font-size: 1rem;
-    }
-    .news-item p {
-        margin: 0;
-        font-size: 0.85rem;
-        color: var(--muted);
-    }
-    .news-item a {
-        color: var(--text-color);
-        text-decoration: none;
-    }
-    .news-item a:hover {
-        color: var(--primary);
-    }
-</style>
-{% endblock %}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-{% block content %}
-<div class="container">
-    {% if is_mock %}
-    <div class="alert alert-warning">Using mock data due to CoinGecko API failure. Live prices may be unavailable.</div>
-    {% endif %}
-    <div style="display: none;">Debug market_data: {{ market_data|json_filter }}</div>
-    <div style="display: none;">Debug portfolio: {{ portfolio|json_filter }}</div>
-    <div style="display: none;">Debug news_feed: {{ news_feed|json_filter }}</div>
-    <div style="display: none;">Debug watchlist: {{ watchlist|json_filter }}</div>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #334155;
+            line-height: 1.6;
+        }
 
-    <div class="stats-grid fade-in">
-        <div class="stat-card">
-            <div class="stat-header">
-                <div class="stat-label">Portfolio Value</div>
-                <div class="stat-icon"><i class="fas fa-wallet"></i></div>
-            </div>
-            <div class="stat-value">${{ summary_data.current_value|floatformat:2|default:"0.00" }}</div>
-            <div class="stat-change">
-                <span class="{% if summary_data.daily_change_value >= 0 %}trend-up{% else %}trend-down{% endif %}" id="totalChange">
-                    <i class="fas fa-arrow-{% if summary_data.daily_change_value >= 0 %}up{% else %}down{% endif %}"></i>
-                    ${{ summary_data.daily_change_value|floatformat:2|default:"0.00" }} ({{ summary_data.daily_change|floatformat:2|default:"0.00" }}%)
-                </span>
-                <span style="color: var(--muted); margin-left: auto;">24h</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-header">
-                <div class="stat-label">Total Profit/Loss</div>
-                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-            </div>
-            <div class="stat-value">${{ summary_data.profit_loss|floatformat:2|default:"0.00" }}</div>
-            <div class="stat-change">
-                <span class="{% if summary_data.profit_loss >= 0 %}trend-up{% else %}trend-down{% endif %}" id="totalPLPercent">
-                    {{ summary_data.profit_loss|floatformat:2|default:"0.00"|add:"%" }}
-                </span>
-                <span style="color: var(--muted); margin-left: auto;">All time</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-header">
-                <div class="stat-label">Best Performer</div>
-                <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-            </div>
-            <div class="stat-value">
-                {% with best=portfolio|best_performer:market_data %}
-                    {{ best.symbol|default:"--" }}
-                {% endwith %}
-            </div>
-            <div class="stat-change">
-                {% with best=portfolio|best_performer:market_data %}
-                <span class="{% if best.change >= 0 %}trend-up{% else %}trend-down{% endif %}" id="bestPerformerChange">
-                    {{ best.change|floatformat:2|default:"0.00" }}%
-                </span>
-                {% endwith %}
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-header">
-                <div class="stat-label">Market Cap</div>
-                <div class="stat-icon"><i class="fas fa-globe"></i></div>
-            </div>
-            <div class="stat-value">
-                ${{ market_data.bitcoin.usd_market_cap|format_large_number|default:"0.00" }}
-            </div>
-            <div class="stat-change">
-                <span class="{% if market_data.bitcoin.usd_24h_change >= 0 %}trend-up{% else %}trend-down{% endif %}">
-                    <i class="fas fa-arrow-{% if market_data.bitcoin.usd_24h_change >= 0 %}up{% else %}down{% endif %}"></i>
-                    {{ market_data.bitcoin.usd_24h_change|floatformat:2|default:"0.00" }}%
-                </span>
-                <span style="color: var(--muted); margin-left: auto;">Global</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="stats-grid fade-in" style="margin-top: 20px;">
-        <div class="stat-card full-width">
-            <div class="stat-header">
-                <div class="coin-info" style="align-items: center;">
-                    <div class="coin-icon" style="height: 40px; width: 40px;">
-                        {% if market_data.bitcoin.image %}
-                        <img src="{{ market_data.bitcoin.image }}" alt="Bitcoin icon" style="width: 100%; height: 100%; object-fit: contain;">
+        /* Navbar */
+        .navbar {
+            background: var(--dark-bg);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.75rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .navbar-brand i {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-right: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: left 0.3s ease;
+        }
+
+        .nav-link:hover::before {
+            left: 0;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 25px;
+            padding-left: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+            color: white;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-outline-light {
+            border-radius: 25px;
+            margin-left: 0.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background: var(--gradient-primary);
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Cart Badge */
+        .position-relative .badge {
+            animation: bounce 2s infinite;
+            background: var(--gradient-accent);
+            font-size: 0.7rem;
+            border: 2px solid white;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            background: var(--dark-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: var(--shadow-xl);
+            backdrop-filter: blur(20px);
+        }
+
+        .dropdown-item {
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 0.2rem 0.5rem;
+        }
+
+        .dropdown-item:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Scrolling Prices Banner */
+        .scrolling-prices {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 0.50rem 0; /* Slightly increased padding for visibility */
+            font-weight: 450; /* Light font weight for subtlety */
+            box-shadow: none; /* No shadow for minimal appearance */
+            position: relative;
+            overflow: hidden;
+            font-size: 0.9rem; /* Slightly larger font size for readability */
+            opacity: 1.9; /* Increased opacity for better visibility */
+            max-width: 700px; /* Constrain width to avoid full-page span */
+            margin: 0 auto; /* Center the banner */
+            border-radius: 4px; /* Subtle rounded corners */
+        }
+
+        .scrolling-prices::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%); /* Slightly stronger shimmer for visibility */
+            animation: shimmer 3s infinite;
+        }
+
+        .scrolling-prices span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 25s linear infinite; /* Fast scroll for less intrusion */
+            font-size: 0.9rem; /* Matching slightly larger font size */
+            letter-spacing: 0.1px; /* Tight letter spacing */
+            white-space: nowrap; /* Ensure text stays in a single line */
+        }
+
+        /* Product Cards */
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .product-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-card .card-body {
+            position: relative;
+            z-index: 2;
+            padding: 1.5rem;
+        }
+
+        /* Price Styling */
+        .price-original {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .price-discount {
+            color: var(--danger-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .rating-stars {
+            color: var(--warning-color);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Messages */
+        .alert {
+            border: none;
+            border-radius: 12px;
+            backdrop-filter: blur(20px);
+            border-left: 4px solid;
+            animation: slideInDown 0.5s ease;
+        }
+
+        .alert-success {
+            background: rgba(16, 185, 129, 0.1);
+            border-left-color: var(--accent-color);
+            color: #065f46;
+        }
+
+        .alert-danger {
+            background: rgba(239, 68, 68, 0.1);
+            border-left-color: var(--danger-color);
+            color: #991b1b;
+        }
+
+        .alert-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left-color: var(--warning-color);
+            color: #92400e;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+        }
+
+        footer h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        footer .fab {
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        footer .fab:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Animations */
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
+            40%, 43% { transform: translate3d(0, -8px, 0); }
+            70% { transform: translate3d(0, -4px, 0); }
+            90% { transform: translate3d(0, -2px, 0); }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translate3d(0, -100%, 0);
+                opacity: 0;
+            }
+            to {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.4rem;
+            }
+
+            .scrolling-prices {
+                padding: 0.2rem 0; /* Slightly increased padding for mobile visibility */
+                font-size: 0.65rem; /* Slightly larger font size for mobile readability */
+                opacity: 0.85; /* Slightly higher opacity for mobile */
+                max-width: 90%; /* Slightly narrower on mobile */
+            }
+
+            .scrolling-prices span {
+                animation: scroll-left 8s linear infinite; /* Very fast scroll on mobile */
+                font-size: 0.65rem; /* Matching slightly larger font size */
+            }
+
+            .product-card:hover {
+                transform: translateY(-6px) scale(1.01);
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Glass morphism effect for cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 16px;
+        }
+
+        /* Hover effects for interactive elements */
+        .interactive:hover {
+            cursor: pointer;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'core:home' %}">
+                <i class="fas fa-hospital" aria-hidden="true"></i> Hospital Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'products:product_list' %}">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:contact' %}">Contact Mint</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <form class="d-flex me-3 search-container" method="GET" action="{% url 'core:search' %}" role="search">
+                        <input class="form-control" type="search" placeholder="Search medical products..." name="q" aria-label="Search medical products">
+                        <button class="btn btn-outline-light" type="submit" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></button>
+                    </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link position-relative interactive" href="{% url 'cart:cart_detail' %}" aria-label="Shopping cart">
+                                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                {% if cart and cart.get_total_items %}
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {{ cart.get_total_items }}
+                                        <span class="visually-hidden">items in cart</span>
+                                    </span>
+                                {% endif %}
+                            </a>
+                        </li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user" aria-hidden="true"></i> {{ user.username }}
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{% url 'orders:order_list' %}"><i class="fas fa-list-alt me-2" aria-hidden="true"></i>My Orders</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt me-2" aria-hidden="true"></i>Logout</a></li>
+                                </ul>
+                            </li>
                         {% else %}
-                        BTC
+                            <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}"><i class="fas fa-sign-in-alt me-1" aria-hidden="true"></i>Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}"><i class="fas fa-user-plus me-1" aria-hidden="true"></i>Register</a></li>
                         {% endif %}
-                    </div>
-                    <div class="coin-details" style="margin-left: 10px;">
-                        <h4 style="margin: 0;">Bitcoin</h4>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--muted);">BTC</p>
-                    </div>
+                    </ul>
                 </div>
-                <div class="stat-label" style="font-size: 1rem;">Live Price</div>
-            </div>
-            <div class="stat-value" style="font-size: 2rem; margin-top: 10px;">
-                ${{ market_data.bitcoin.usd|floatformat:2|default:"0.00" }}
-            </div>
-            <div class="stat-change">
-                <span class="{% if market_data.bitcoin.usd_24h_change >= 0 %}trend-up{% else %}trend-down{% endif %}" id="bitcoinChange">
-                    <i class="fas fa-arrow-{% if market_data.bitcoin.usd_24h_change >= 0 %}up{% else %}down{% endif %}"></i>
-                    {{ market_data.bitcoin.usd_24h_change|floatformat:2|default:"0.00" }}%
-                </span>
-                <span style="color: var(--muted); margin-left: auto;">24h</span>
             </div>
         </div>
+    </nav>
+
+    <div class="scrolling-prices" role="marquee">
+        <span>
+            {% for product in scrolling_products %}
+                🏥 {{ product.name }} - KSh {{ product.price }}{% if not forloop.last %} • {% endif %}
+            {% empty %}
+                🏥 Welcome to Hospital Store - Your trusted healthcare partner • Quality medical products available now • Free delivery on orders above KSh 5,000
+            {% endfor %}
+        </span>
     </div>
 
-    <div class="main-grid">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Portfolio Holdings</h3>
-                <div class="card-actions">
-                    <button class="btn btn-secondary" id="refreshBtn">
-                        <i class="fas fa-sync-alt"></i> Refresh
-                    </button>
-                    <button class="btn btn-primary" onclick="openModal('addAssetModal')">
-                        <i class="fas fa-plus"></i> Add Asset
-                    </button>
+    {% if messages %}
+        <div class="container mt-3">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    <i class="fas fa-info-circle me-2" aria-hidden="true"></i>{{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <main class="main-content">{% block content %}{% endblock %}</main>
+
+    <footer class="mt-5 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-hospital me-2" aria-hidden="true"></i>Hospital Store</h5>
+                    <p class="text-muted">Your trusted source for quality hospital products and medical supplies. Serving healthcare professionals with excellence since 2020.</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <i class="fas fa-phone me-2 text-success" aria-hidden="true"></i>
+                        <span>+254 720 957 180</span>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fas fa-envelope me-2 text-info" aria-hidden="true"></i>
+                        <span>info@transdigitalsytem.it.com</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="{% url 'core:about' %}"><i class="fas fa-info-circle me-2" aria-hidden="true"></i>About Us</a></li>
+                        <li class="mb-2"><a href="{% url 'core:contact' %}"><i class="fas fa-envelope me-2" aria-hidden="true"></i>Contact</a></li>
+                        <li class="mb-2"><a href="{% url 'products:product_list' %}"><i class="fas fa-box me-2" aria-hidden="true"></i>Products</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-shield-alt me-2" aria-hidden="true"></i>Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-file-contract me-2" aria-hidden="true"></i>Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#"><i class="fas fa-heartbeat me-2" aria-hidden="true"></i>Medical Equipment</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-pills me-2" aria-hidden="true"></i>Pharmaceuticals</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-user-md me-2" aria-hidden="true"></i>Surgical Supplies</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-first-aid me-2" aria-hidden="true"></i>First Aid</a></li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-wheelchair me-2" aria-hidden="true"></i>Mobility Aids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex flex-column">
+                        <a href="#" class="mb-2"><i class="fab fa-facebook me-2" aria-hidden="true"></i>Facebook</a>
+                        <a href="#" class="mb-2"><i class="fab fa-twitter me-2" aria-hidden="true"></i>Twitter</a>
+                        <a href="#" class="mb-2"><i class="fab fa-instagram me-2" aria-hidden="true"></i>Instagram</a>
+                        <a href="#" class="mb-2"><i class="fab fa-linkedin me-2" aria-hidden="true"></i>LinkedIn</a>
+                    </div>
                 </div>
             </div>
-            <div class="table-container">
-                <table class="portfolio-table">
-                    <thead>
-                        <tr>
-                            <th>Asset</th>
-                            <th>Holdings</th>
-                            <th>Avg Buy Price</th>
-                            <th>Current Price</th>
-                            <th>Market Value</th>
-                            <th>24h Change</th>
-                            <th>P&L</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="portfolioTableBody">
-                        {% for asset in portfolio %}
-                        <tr class="clickable-row" data-coin-id="{{ asset.coin_id }}">
-                            <td>
-                                <div class="coin-info">
-                                    <div class="coin-icon">{% if market_data|lookup:asset.coin_id|lookup:'image' %}<img src="{{ market_data|lookup:asset.coin_id|lookup:'image' }}" alt="{{ asset.coin_id }} icon">{% else %}{{ market_data|lookup:asset.coin_id|lookup:'symbol'|default:asset.coin_id|slice:":3"|upper }}{% endif %}</div>
-                                    <div class="coin-details">
-                                        <h4>{{ asset.coin_id|capfirst }}</h4>
-                                        <p>{{ market_data|lookup:asset.coin_id|lookup:'symbol'|default:asset.coin_id|upper }}</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="price-cell">{{ asset.amount|format_number }}</td>
-                            <td class="price-cell">${{ asset.buy_price|floatformat:2 }}</td>
-                            <td class="price-cell">${{ market_data|lookup:asset.coin_id|lookup:'usd'|floatformat:2|default:"0.00" }}</td>
-                            <td class="price-cell">${{ asset.amount|mul:market_data|lookup:asset.coin_id|lookup:'usd'|floatformat:2|default:"0.00" }}</td>
-                            <td class="price-cell">
-                                <span class="change-badge {% if market_data|lookup:asset.coin_id|lookup:'usd_24h_change' >= 0 %}change-positive{% else %}change-negative{% endif %}">
-                                    <i class="fas fa-arrow-{% if market_data|lookup:asset.coin_id|lookup:'usd_24h_change' >= 0 %}up{% else %}down{% endif %}"></i>
-                                    {{ market_data|lookup:asset.coin_id|lookup:'usd_24h_change'|floatformat:2|default:"0.00" }}%
-                                </span>
-                            </td>
-                            <td class="price-cell">
-                                {% with pl=asset.amount|mul:market_data|lookup:asset.coin_id|lookup:'usd'|sub:asset.invested %}
-                                <span style="color: {% if pl >= 0 %}var(--pos){% else %}var(--neg){% endif %}">
-                                    ${{ pl|floatformat:2|default:"0.00" }} ({{ pl|div:asset.invested|mul:100|floatformat:1|default:"0.0" }}%)
-                                </span>
-                                {% endwith %}
-                            </td>
-                            <td>
-                                <form method="post" action="{% url 'delete_portfolio' asset.coin_id %}" style="display: inline;">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-secondary" style="padding: 4px 8px; font-size: 12px;">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                        {% empty %}
-                        <tr>
-                            <td colspan="8" style="text-align: center; padding: 20px; color: var(--muted);">
-                                No assets in portfolio. Click "Add Asset" to start.
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="text-center text-md-start">
+                        &copy; 2025 Hospital Store. All rights reserved.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-end text-muted">
+                        <small>Made with <i class="fas fa-heart text-danger" aria-hidden="true"></i> in Kenya</small>
+                    </div>
+                </div>
             </div>
         </div>
+    </footer>
 
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Analytics</h3>
-            </div>
-            <div class="chart-tabs">
-                <button class="chart-tab active" data-chart="allocation">Allocation</button>
-                <button class="chart-tab" data-chart="performance">Performance</button>
-                <button class="chart-tab" data-chart="history">History</button>
-            </div>
-            <div class="chart-container">
-                <canvas id="mainChart"></canvas>
-            </div>
-        </div>
-
-        <div class="card full-width">
-            <div class="card-header">
-                <h3 class="card-title">Watchlist</h3>
-                <button class="btn btn-primary" onclick="openModal('addWatchlistModal')">
-                    <i class="fas fa-plus"></i> Add to Watchlist
-                </button>
-            </div>
-            <div class="table-container">
-                <table class="watchlist-table">
-                    <thead>
-                        <tr>
-                            <th>Asset</th>
-                            <th>Current Price</th>
-                            <th>24h Change</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for coin in watchlist %}
-                        <tr>
-                            <td>
-                                <div class="coin-info">
-                                    <div class="coin-icon">{% if market_data|lookup:coin.coin_id|lookup:'image' %}<img src="{{ market_data|lookup:coin.coin_id|lookup:'image' }}" alt="{{ coin.coin_id }} icon">{% else %}{{ market_data|lookup:coin.coin_id|lookup:'symbol'|default:coin.coin_id|slice:":3"|upper }}{% endif %}</div>
-                                    <div class="coin-details">
-                                        <h4>{{ coin.coin_id|capfirst }}</h4>
-                                        <p>{{ market_data|lookup:coin.coin_id|lookup:'symbol'|default:coin.coin_id|upper }}</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="price-cell">${{ market_data|lookup:coin.coin_id|lookup:'usd'|floatformat:2|default:"0.00" }}</td>
-                            <td class="price-cell">
-                                <span class="change-badge {% if market_data|lookup:coin.coin_id|lookup:'usd_24h_change' >= 0 %}change-positive{% else %}change-negative{% endif %}">
-                                    <i class="fas fa-arrow-{% if market_data|lookup:coin.coin_id|lookup:'usd_24h_change' >= 0 %}up{% else %}down{% endif %}"></i>
-                                    {{ market_data|lookup:coin.coin_id|lookup:'usd_24h_change'|floatformat:2|default:"0.00" }}%
-                                </span>
-                            </td>
-                            <td>
-                                <form method="post" action="{% url 'delete_watchlist' coin.coin_id %}" style="display: inline;">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-secondary" style="padding: 4px 8px; font-size: 12px;">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                        {% empty %}
-                        <tr>
-                            <td colspan="4" style="text-align: center; padding: 20px; color: var(--muted);">
-                                No assets in your watchlist.
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="card full-width">
-            <div class="card-header">
-                <h3 class="card-title">Market News</h3>
-            </div>
-            <ul class="news-feed">
-                {% for item in news_feed %}
-                <li class="news-item">
-                    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-                        <h5>{{ item.title }}</h5>
-                        <p>{{ item.source }} - {{ item.published_at }}</p>
+    <div class="modal fade" id="affiliateModal" tabindex="-1" aria-labelledby="affiliateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="affiliateModalLabel">🔥 Special Offer: Infrared Thermometer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="https://m.media-amazon.com/images/I/71r2U9gL+8L._AC_SL1500_.jpg" class="img-fluid mb-3" alt="Infrared Forehead Thermometer">
+                    <p class="lead">Don't miss out on this no-touch thermometer!</p>
+                    <p>Perfect for quick and hygienic temperature checks at home or in a clinical setting.</p>
+                    <a href="https://www.amazon.com/Forehead-Thermometer-No-Touch-Infrared-Eligible/dp/B0B513SHYR?crid=32HZE81USWTRQ&dib=eyJ2IjoiMSJ9.P7n0YoLv4PKh0LRapeecerVzw-rYb3uaH6szq9FDEJLr4QNKSaVuXSB39pdsvsXm3LIWXMyYpRRcso_zkAWRraMpsNR2AWxuQBKfOKAV6aDXRMIAbzI8j8IfsyA-ahepJXFcTImKOVs2Hlt1CFyF3uFz32khyvDde_K8p0PwL_o4J5SZUF-dt5PWm9hGNet__SPnaJM4n4CE7gWmPZMwtCa2ZfhUPJ--eF10gnT9Dw17h6wPEgMZF9CZj2UKKJ5P_g9_0FmKS0BZi8IHdGcdWUJctNw0Q4gHHgiOhRNjoSs.HHmkg66ZuwZ0q5lkSRDQB50thuZzgnlwqHW1ka-3-uM&dib_tag=se&keywords=thermometer&qid=1755156494&sprefix=ther%2Caps%2C494&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=transdigital-20&linkId=9a728cddb81732f5b66b4a3e65012ed9&language=en_US&ref_=as_li_ss_tl" class="btn btn-warning mt-3" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-amazon me-2"></i> Shop Now on Amazon
                     </a>
-                </li>
-                {% empty %}
-                <li class="news-item">
-                    <p style="text-align: center; color: var(--muted);">No news available at the moment.</p>
-                </li>
-                {% endfor %}
-            </ul>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="{% static 'js/dashboard.js' %}"></script>
-<script>
-    const portfolioData = JSON.parse('{{ portfolio|json_filter|safe }}');
-    const marketData = JSON.parse('{{ market_data|json_filter|safe }}');
-    const newsData = JSON.parse('{{ news_feed|json_filter|safe }}');
-    const watchlistData = JSON.parse('{{ watchlist|json_filter|safe }}');
-</script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
 
-{% endblock %}
-```
+        // Button click effect
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Search input animation
+        const searchInput = document.querySelector('input[name="q"]');
+        if (searchInput) {
+            searchInput.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            searchInput.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        }
+
+        // Auto-hide alerts
+        setTimeout(() => {
+            document.querySelectorAll('.alert').forEach(alert => {
+                if (alert.querySelector('.btn-close')) {
+                    alert.style.transition = 'opacity 0.3s, transform 0.3s';
+                    alert.style.opacity = '0';
+                    alert.style.transform = 'translateY(-20px)';
+                    setTimeout(() => alert.remove(), 300);
+                }
+            });
+        }, 5000);
+
+        // JavaScript to show the affiliate modal automatically
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const affiliateModal = new bootstrap.Modal(document.getElementById('affiliateModal'));
+            affiliateModal.show();
+        });
+    </script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
