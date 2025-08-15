@@ -196,16 +196,16 @@
         .scrolling-prices {
             background: var(--gradient-accent);
             color: white;
-            padding: 0.50rem 0; /* Slightly increased padding for visibility */
-            font-weight: 450; /* Light font weight for subtlety */
-            box-shadow: none; /* No shadow for minimal appearance */
+            padding: 0.50rem 0;
+            font-weight: 450;
+            box-shadow: none;
             position: relative;
             overflow: hidden;
-            font-size: 0.9rem; /* Slightly larger font size for readability */
-            opacity: 1.9; /* Increased opacity for better visibility */
-            max-width: 700px; /* Constrain width to avoid full-page span */
-            margin: 0 auto; /* Center the banner */
-            border-radius: 4px; /* Subtle rounded corners */
+            font-size: 0.9rem;
+            opacity: 1.9;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 4px;
         }
 
         .scrolling-prices::before {
@@ -215,17 +215,17 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%); /* Slightly stronger shimmer for visibility */
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
             animation: shimmer 3s infinite;
         }
 
         .scrolling-prices span {
             display: inline-block;
             padding-left: 100%;
-            animation: scroll-left 25s linear infinite; /* Fast scroll for less intrusion */
-            font-size: 0.9rem; /* Matching slightly larger font size */
-            letter-spacing: 0.1px; /* Tight letter spacing */
-            white-space: nowrap; /* Ensure text stays in a single line */
+            animation: scroll-left 25s linear infinite;
+            font-size: 0.9rem;
+            letter-spacing: 0.1px;
+            white-space: nowrap;
         }
 
         /* Product Cards */
@@ -409,15 +409,15 @@
             }
 
             .scrolling-prices {
-                padding: 0.2rem 0; /* Slightly increased padding for mobile visibility */
-                font-size: 0.65rem; /* Slightly larger font size for mobile readability */
-                opacity: 0.85; /* Slightly higher opacity for mobile */
-                max-width: 90%; /* Slightly narrower on mobile */
+                padding: 0.2rem 0;
+                font-size: 0.65rem;
+                opacity: 0.85;
+                max-width: 90%;
             }
 
             .scrolling-prices span {
-                animation: scroll-left 8s linear infinite; /* Very fast scroll on mobile */
-                font-size: 0.65rem; /* Matching slightly larger font size */
+                animation: scroll-left 8s linear infinite;
+                font-size: 0.65rem;
             }
 
             .product-card:hover {
@@ -536,7 +536,46 @@
         </div>
     {% endif %}
 
-    <main class="main-content">{% block content %}{% endblock %}</main>
+    <main class="main-content">
+        <div class="container">
+            <h2 class="mb-4 text-center">Featured Medical Products</h2>
+            <div class="row">
+                <!-- Product 1: Infrared Thermometer -->
+                <div class="col-md-4 mb-4">
+                    <div class="product-card">
+                        <div class="card-body text-center">
+                            <img src="https://m.media-amazon.com/images/I/71r2U9gL+8L._AC_SL1500_.jpg" class="img-fluid mb-3" alt="Infrared Forehead Thermometer" style="height: 150px; object-fit: cover;">
+                            <h5 class="card-title">Infrared Thermometer</h5>
+                            <p class="card-text">Quick and hygienic no-touch temperature checks for home or clinical use.</p>
+                            <a href="https://example.com/affiliate/thermometer" class="btn btn-primary interactive" target="_blank" rel="noopener noreferrer">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2: Pulse Oximeter -->
+                <div class="col-md-4 mb-4">
+                    <div class="product-card">
+                        <div class="card-body text-center">
+                            <img src="https://example.com/images/pulse-oximeter.jpg" class="img-fluid mb-3" alt="Pulse Oximeter" style="height: 150px; object-fit: cover;">
+                            <h5 class="card-title">Pulse Oximeter</h5>
+                            <p class="card-text">Easily monitor oxygen levels and pulse rate with this compact device.</p>
+                            <a href="https://example.com/affiliate/pulse-oximeter" class="btn btn-primary interactive" target="_blank" rel="noopener noreferrer">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3: Blood Pressure Monitor -->
+                <div class="col-md-4 mb-4">
+                    <div class="product-card">
+                        <div class="card-body text-center">
+                            <img src="https://example.com/images/blood-pressure-monitor.jpg" class="img-fluid mb-3" alt="Blood Pressure Monitor" style="height: 150px; object-fit: cover;">
+                            <h5 class="card-title">Blood Pressure Monitor</h5>
+                            <p class="card-text">Accurate and reliable blood pressure readings at home.</p>
+                            <a href="https://example.com/affiliate/blood-pressure-monitor" class="btn btn-primary interactive" target="_blank" rel="noopener noreferrer">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer class="mt-5 py-5">
         <div class="container">
@@ -587,7 +626,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="text-center text-md-start">
-                        &copy; 2025 Hospital Store. All rights reserved.
+                        &copy; 2025 Hospital Store. All rights reserved. | <small>This site contains affiliate links, and we may earn a commission from qualifying purchases.</small>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -610,9 +649,6 @@
                     <img src="https://m.media-amazon.com/images/I/71r2U9gL+8L._AC_SL1500_.jpg" class="img-fluid mb-3" alt="Infrared Forehead Thermometer">
                     <p class="lead">Don't miss out on this no-touch thermometer!</p>
                     <p>Perfect for quick and hygienic temperature checks at home or in a clinical setting.</p>
-                    <a href="https://www.amazon.com/Forehead-Thermometer-No-Touch-Infrared-Eligible/dp/B0B513SHYR?crid=32HZE81USWTRQ&dib=eyJ2IjoiMSJ9.P7n0YoLv4PKh0LRapeecerVzw-rYb3uaH6szq9FDEJLr4QNKSaVuXSB39pdsvsXm3LIWXMyYpRRcso_zkAWRraMpsNR2AWxuQBKfOKAV6aDXRMIAbzI8j8IfsyA-ahepJXFcTImKOVs2Hlt1CFyF3uFz32khyvDde_K8p0PwL_o4J5SZUF-dt5PWm9hGNet__SPnaJM4n4CE7gWmPZMwtCa2ZfhUPJ--eF10gnT9Dw17h6wPEgMZF9CZj2UKKJ5P_g9_0FmKS0BZi8IHdGcdWUJctNw0Q4gHHgiOhRNjoSs.HHmkg66ZuwZ0q5lkSRDQB50thuZzgnlwqHW1ka-3-uM&dib_tag=se&keywords=thermometer&qid=1755156494&sprefix=ther%2Caps%2C494&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=transdigital-20&linkId=9a728cddb81732f5b66b4a3e65012ed9&language=en_US&ref_=as_li_ss_tl" class="btn btn-warning mt-3" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-amazon me-2"></i> Shop Now on Amazon
-                    </a>
                 </div>
             </div>
         </div>
@@ -664,6 +700,16 @@
             });
         }, 5000);
 
+        // Track affiliate link clicks
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('click', () => {
+                gtag('event', 'affiliate_click', {
+                    'event_category': 'Affiliate',
+                    'event_label': button.closest('.product-card')?.querySelector('.card-title')?.textContent || 'Unknown Product'
+                });
+            });
+        });
+
         // JavaScript to show the affiliate modal automatically
         document.addEventListener('DOMContentLoaded', (event) => {
             const affiliateModal = new bootstrap.Modal(document.getElementById('affiliateModal'));
@@ -674,4 +720,3 @@
     {% block extra_js %}{% endblock %}
 </body>
 </html>
-
