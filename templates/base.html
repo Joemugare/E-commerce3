@@ -7,7 +7,11 @@
     <meta name="author" content="Hospital Store">
     <title>{% block title %}Hospital Store{% endblock %}</title>
 
-    <!-- Google Tag Manager -->
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2169399263370531"
+     crossorigin="anonymous"></script>
+
+    <!-- Google Tag Manager (Analytics) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHE671N9F1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -199,16 +203,16 @@
         .scrolling-prices {
             background: var(--gradient-accent);
             color: white;
-            padding: 0.50rem 0; /* Slightly increased padding for visibility */
-            font-weight: 450; /* Light font weight for subtlety */
-            box-shadow: none; /* No shadow for minimal appearance */
+            padding: 0.50rem 0;
+            font-weight: 450;
+            box-shadow: none;
             position: relative;
             overflow: hidden;
-            font-size: 0.9rem; /* Slightly larger font size for readability */
-            opacity: 1.9; /* Increased opacity for better visibility */
-            max-width: 700px; /* Constrain width to avoid full-page span */
-            margin: 0 auto; /* Center the banner */
-            border-radius: 4px; /* Subtle rounded corners */
+            font-size: 0.9rem;
+            opacity: 1.9;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 4px;
         }
 
         .scrolling-prices::before {
@@ -218,17 +222,17 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%); /* Slightly stronger shimmer for visibility */
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
             animation: shimmer 3s infinite;
         }
 
         .scrolling-prices span {
             display: inline-block;
             padding-left: 100%;
-            animation: scroll-left 25s linear infinite; /* Fast scroll for less intrusion */
-            font-size: 0.9rem; /* Matching slightly larger font size */
-            letter-spacing: 0.1px; /* Tight letter spacing */
-            white-space: nowrap; /* Ensure text stays in a single line */
+            animation: scroll-left 25s linear infinite;
+            font-size: 0.9rem;
+            letter-spacing: 0.1px;
+            white-space: nowrap;
         }
 
         /* Product Cards */
@@ -412,15 +416,15 @@
             }
 
             .scrolling-prices {
-                padding: 0.2rem 0; /* Slightly increased padding for mobile visibility */
-                font-size: 0.65rem; /* Slightly larger font size for mobile readability */
-                opacity: 0.85; /* Slightly higher opacity for mobile */
-                max-width: 90%; /* Slightly narrower on mobile */
+                padding: 0.2rem 0;
+                font-size: 0.65rem;
+                opacity: 0.85;
+                max-width: 90%;
             }
 
             .scrolling-prices span {
-                animation: scroll-left 8s linear infinite; /* Very fast scroll on mobile */
-                font-size: 0.65rem; /* Matching slightly larger font size */
+                animation: scroll-left 8s linear infinite;
+                font-size: 0.65rem;
             }
 
             .product-card:hover {
@@ -480,6 +484,7 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'products:product_list' %}">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'core:about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'core:contact' %}">Contact Mint</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:featured_deals' %}">Featured Deals</a></li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <form class="d-flex me-3 search-container" method="GET" action="{% url 'core:search' %}" role="search">
@@ -595,7 +600,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="text-center text-md-start">
-                        &copy; 2025 Hospital Store. All rights reserved.
+                        &copy; 2025 Hospital Store. All rights reserved. | <small>This site contains affiliate links, and we may earn a commission from qualifying purchases.</small>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -651,7 +656,7 @@
                     alert.style.opacity = '0';
                     alert.style.transform = 'translateY(-20px)';
                     setTimeout(() => alert.remove(), 300);
-               18:02
+                }
             });
         }, 5000);
     </script>

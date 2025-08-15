@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block title %}Logout - Hospital Store{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card glass-card p-4 mt-5 text-center">
+                    <h2 class="mb-4" style="color: var(--primary-color);">{% trans "Logout" %}</h2>
+                    <p>{% trans "Are you sure you want to log out?" %}</p>
+                    <form method="post" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary mb-2">{% trans "Yes, Log Out" %}</button>
+                            <a href="{% url 'home' %}" class="btn btn-secondary">{% trans "Cancel" %}</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+    }
+    .btn-primary {
+        background: var(--gradient-primary);
+        border: none;
+    }
+    .btn-primary:hover {
+        background: var(--gradient-accent);
+        transform: scale(1.05);
+    }
+    .btn-secondary {
+        background: var(--secondary-color);
+        border: none;
+    }
+    .btn-secondary:hover {
+        background: var(--accent-color);
+        transform: scale(1.05);
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block title %}Login - Hospital Store{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card glass-card p-4 mt-5 login-card">
+                    <h2 class="text-center mb-4 login-title" style="color: var(--primary-color);">{% trans "Login" %}</h2>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    {% get_providers as socialaccount_providers %}
+                    {% if socialaccount_providers %}
+                        <p class="text-center social-login-text">{% blocktrans %}Or login with:{% endblocktrans %}</p>
+                        <div class="list-group list-group-horizontal justify-content-center mb-4 social-buttons">
+                            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                        </div>
+                        <hr class="custom-hr">
+                    {% endif %}
+                    <form class="login" method="POST" action="{% url 'account_login' %}">
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <div class="mb-4">
+                            <label for="id_login" class="form-label text-light">{% trans "Email or Username" %}</label>
+                            <input type="text" name="login" id="id_login" class="form-control login-input" placeholder="Enter email or username" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="id_password" class="form-label text-light">{% trans "Password" %}</label>
+                            <input type="password" name="password" id="id_password" class="form-control login-input" placeholder="Enter password" required>
+                        </div>
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <div class="d-grid mb-4">
+                            <button type="submit" class="btn btn-primary login-button">{% trans "Login" %}</button>
+                        </div>
+                        <div class="text-center">
+                            <a href="{% url 'account_reset_password' %}" class="text-muted forgot-password">{% trans "Forgot Password?" %}</a>
+                        </div>
+                        <p class="text-center mt-3 signup-text">{% blocktrans %}Don't have an account? <a href="{{ signup_url }}">Sign Up</a>{% endblocktrans %}</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Glassmorphism Card */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* Login Card Specific Styling */
+    .login-card {
+        padding: 2rem;
+        animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Form Inputs */
+    .login-input {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid var(--border-color);
+        color: var(--text-light);
+        border-radius: 8px;
+        padding: 0.75rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .login-input:focus {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        outline: none;
+    }
+
+    /* Labels */
+    .form-label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Buttons */
+    .login-button {
+        background: var(--gradient-primary);
+        border: none;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .login-button:hover {
+        background: var(--gradient-accent);
+        transform: scale(1.05);
+    }
+
+    /* Social Login */
+    .social-login-text {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+    .social-buttons .socialaccount_provider {
+        margin: 0 0.5rem;
+    }
+    .socialaccount_provider > a {
+        background: var(--secondary-color);
+        color: var(--text-light);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+    .socialaccount_provider > a:hover {
+        background: var(--accent-color);
+        text-decoration: none;
+    }
+
+    /* Horizontal Rule */
+    .custom-hr {
+        border: 0;
+        height: 1px;
+        background: var(--border-color);
+        opacity: 0.3;
+    }
+
+    /* Links */
+    .forgot-password, .signup-text a {
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+    }
+    .forgot-password:hover, .signup-text a:hover {
+        color: var(--secondary-color);
+    }
+
+    /* Title Animation */
+    .login-title {
+        animation: slideIn 0.5s ease-out;
+    }
+    @keyframes slideIn {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Add smooth scroll effect or other JS if needed
+    document.querySelectorAll('.login-input').forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentElement.style.background = 'rgba(255, 255, 255, 0.05)';
+        });
+        input.addEventListener('blur', () => {
+            input.parentElement.style.background = 'transparent';
+        });
+    });
+</script>
+{% endblock %}

@@ -38,3 +38,6 @@ def contact(request):
     scrolling_products = Product.objects.filter(available=True)[:10]  # For ticker
     context = {'scrolling_products': scrolling_products}
     return render(request, 'core/contact.html', context)
+
+def featured_deals(request):
+    return render(request, 'core/featured_deals.html')

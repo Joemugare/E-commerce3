@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Featured Deals - Hospital Store{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <div class="container">
+        <h2 class="mb-4 text-center">Featured Medical Deals</h2>
+        <div class="row">
+            <!-- Product 1: Blood Pressure Monitors -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <div class="card-body text-center">
+                        <img src="https://m.media-amazon.com/images/I/61vE05w1kzL._AC_SX425_PIbundle-100,TopRight,0,0_SH20_.jpg" class="img-fluid mb-3" alt="Blood Pressure Monitors" style="height: 150px; object-fit: cover;">
+                        <h5 class="card-title">Blood Pressure Monitors</h5>
+                        <p class="card-text">Accurate home monitoring for managing hypertension.</p>
+                        <a href="https://amzn.to/4fHU1LM" class="btn btn-primary interactive" target="_blank" rel="noopener noreferrer">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2: Lab Syringes -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <div class="card-body text-center">
+                        <img src="https://m.media-amazon.com/images/I/41erMNtrL8L._MCnd_AC_.jpg" class="img-fluid mb-3" alt="Lab Syringes" style="height: 150px; object-fit: cover;">
+                        <h5 class="card-title">Lab Syringes</h5>
+                        <p class="card-text">Precision tools for medical and laboratory use.</p>
+                        <a href="https://amzn.to/4lzyuX1" class="btn btn-primary interactive" target="_blank" rel="noopener noreferrer">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3: Baby Thermometers -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card">
+                    <div class="card-body text-center">
+                        <img src="https://m.media-amazon.com/images/I/41YkEquEXdL._MCnd_AC_.jpg" class="img-fluid mb-3" alt="Baby Thermometers" style="height: 150px; object-fit: cover;">
+                        <h5 class="card-title">Baby Thermometers</h5>
+                        <p class="card-text">Gentle and accurate temperature checks for infants.</p>
+                        <a href="https://amzn.to/4fM442w" class="btn btn-primary interactive" target="_blank" rel="noopener noreferrer">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Track affiliate link clicks
+    document.querySelectorAll('.btn-primary').forEach(button => {
+        button.addEventListener('click', () => {
+            gtag('event', 'affiliate_click', {
+                'event_category': 'Affiliate',
+                'event_label': button.closest('.product-card')?.querySelector('.card-title')?.textContent || 'Unknown Product'
+            });
+        });
+    });
+</script>
+{% endblock %}

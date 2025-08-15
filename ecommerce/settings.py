@@ -165,3 +165,6 @@ LOGGING = {
 
 
 APPEND_SLASH = True
+
+# Existing settings...
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'  # Redirect to home page after logout
