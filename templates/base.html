@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hospital Store - Your trusted source for quality medical supplies and equipment.">
     <meta name="author" content="Hospital Store">
     <title>{% block title %}Hospital Store{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon-hospital.png' %}">
+
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
 
     <!-- Google Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2169399263370531"
@@ -634,7 +641,7 @@
                 setTimeout(() => {
                     this.style.transform = 'scale(1)';
                 }, 150);
-            });
+                });
         });
 
         // Search input animation
