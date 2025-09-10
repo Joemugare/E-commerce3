@@ -2933,3 +2933,26 @@ INFO 2025-09-10 15:10:00,112 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Clau
 INFO 2025-09-10 15:10:01,483 autoreload Watching for file changes with StatReloader
 INFO 2025-09-10 15:44:44,316 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\ecommerce\settings.py changed, reloading.
 INFO 2025-09-10 15:44:46,000 autoreload Watching for file changes with StatReloader
+INFO 2025-09-10 15:56:08,630 basehttp code 400, message Bad request version ('Ë¸vÚU\x9bx©x¸\x99¥$xû\x8c&')
+ERROR 2025-09-10 15:56:08,636 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 15:56:08,650 basehttp code 400, message Bad request version ('Tô=\x91\x8d')
+ERROR 2025-09-10 15:56:08,650 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 15:56:09,812 basehttp code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+ERROR 2025-09-10 15:56:09,829 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 15:56:09,837 basehttp code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s::\x00\x00\x00')
+ERROR 2025-09-10 15:56:09,840 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 15:56:56,415 basehttp code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03¹}ÖÔ«Æu~Ayãr\x06¿æ\x86ÈýÿÁ»z·5`é')
+ERROR 2025-09-10 15:56:56,422 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 15:56:56,427 basehttp code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063zz\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-09-10 15:56:56,438 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 15:57:26,290 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\products\models.py changed, reloading.
+INFO 2025-09-10 15:57:27,984 autoreload Watching for file changes with StatReloader
+INFO 2025-09-10 16:00:22,931 basehttp "GET / HTTP/1.1" 301 0
+INFO 2025-09-10 16:00:23,245 basehttp code 400, message Bad request version ('9\x90')
+ERROR 2025-09-10 16:00:23,245 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 16:00:23,498 basehttp code 400, message Bad request version ('ÀËK')
+ERROR 2025-09-10 16:00:23,503 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 16:00:23,561 basehttp code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+ERROR 2025-09-10 16:00:23,561 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 16:00:23,830 basehttp code 400, message Bad request version ('@Î\x06Ð\\^Ü\x05n|°8rX\x82¢\x97E\x96')
+ERROR 2025-09-10 16:00:23,832 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
