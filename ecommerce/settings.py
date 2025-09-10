@@ -11,7 +11,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Allowed hosts with the new domains added
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', 
-                      default='localhost,127.0.0.1,e-commerce3-3o8o.onrender.com,transdigitalsystem.it.com,transdigitalsystem.it.co,e-commerce-lnol.onrender.com', 
+                      default='localhost,127.0.0.1,e-commerce3-w2td.onrender.com,transdigitalsystem.it.com,transdigitalsystem.it.co,e-commerce-lnol.onrender.com', 
                       cast=Csv(cast=str.strip))
 
 # Security settings for production
