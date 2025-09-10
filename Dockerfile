@@ -1,50 +1,51 @@
-<<<<<<< HEAD
-FROM python:3.12-slim
-
-WORKDIR /app
-
-# Install system dependencies for psycopg2, Pillow, etc.
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libpq-dev \
-    libjpeg-dev \
-    zlib1g-dev \
-=======
-﻿# Use official Python 3.12 slim image (compatible with Django 4.1)
+# Use official Python 3.12 slim image
 FROM python:3.12-slim
 
 # Set working directory
 WORKDIR /app
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PIP_DISABLE_PIP_VERSION_CHECK 1
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     gcc \
     libpq-dev \
     python3-dev \
->>>>>>> 7ef00e6 (Clean commit: re-add all files after fixes to cart remove method)
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
 COPY requirements.txt .
-<<<<<<< HEAD
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-COPY . .
-
-CMD ["gunicorn", "ecommerce.wsgi:application", "--bind", "0.0.0.0:8000"]
-=======
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project files
 COPY . .
 
-# Collect static files
+# Create staticfiles directory and collect static files
+RUN mkdir -p staticfiles
 RUN python manage.py collectstatic --noinput
 
-# Expose port (Render uses PORT environment variable, default to 8000 for local)
+# Create a non-root user to run the application
+RUN useradd -m -u 1000 webuser
+RUN chown -R webuser:webuser /app
+USER webuser
+
+# Expose port
 EXPOSE 8000
 
-# Run gunicorn
-CMD ["gunicorn", "ecommerce.wsgi:application", "--bind", "0.0.0.0:8000"]
->>>>>>> 7ef00e6 (Clean commit: re-add all files after fixes to cart remove method)
+# Health check
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8000/ || exit 1
+
+# Run gunicorn with optimized settings
+CMD ["gunicorn", "ecommerce.wsgi:application", \
+     "--bind", "0.0.0.0:8000", \
+     "--workers", "4", \
+     "--worker-class", "gthread", \
+     "--threads", "2", \
+     "--timeout", "120", \
+     "--access-logfile", "-", \
+     "--error-logfile", "-"]

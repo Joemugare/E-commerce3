@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ecommerce-django
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
+    startCommand: gunicorn ecommerce.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+      - key: PYTHON_VERSION
+        value: 3.12.0

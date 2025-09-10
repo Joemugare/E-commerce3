@@ -1,25 +1,49 @@
+# Core Django
 Django==5.1.6
 gunicorn==23.0.0
-dj-database-url==2.2.0
-whitenoise==6.7.0
+
+# Database
 psycopg2-binary==2.9.9
-python-dotenv==1.0.1
-stripe==10.8.0
-requests==2.32.3
+dj-database-url==2.2.0
+
+# Static files & media
+whitenoise==6.7.0
 Pillow==10.4.0
+
+# Environment variables
+python-dotenv==1.0.1
+python-decouple==3.8
+
+# Forms & UI
 django-crispy-forms==2.3.0
 crispy-bootstrap4==2024.10
 crispy-bootstrap5==2024.10
-flet==0.28.3
+
+# Authentication
+django-allauth==0.57.0
+
+# Payments
+stripe==10.8.0
+requests==2.32.3
+
+# Development & debugging
 django-debug-toolbar==4.4.6
-django-taggit==5.0.1
+django-extensions==3.2.3
+
+# API (if needed)
 djangorestframework==3.15.2
 django-filter==23.5
 djangorestframework-simplejwt==5.3.1
-setuptools>=65.5.0
-django-allauth==0.57.0
-python-decouple==3.8
-django-extensions==3.2.3
-dj-database-url==2.0.0
+
+# Tags
+django-taggit==5.0.1
+
+# AWS storage
 boto3==1.34.0
 django-storages==1.14.2
+
+# Flet (if needed for specific functionality)
+flet==0.28.3
+
+# Setuptools (already included in base Python)
+# setuptools>=65.5.0
