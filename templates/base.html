@@ -69,6 +69,29 @@
             background-clip: text;
             color: transparent;
             text-decoration: none;
+            position: relative;
+            display: inline-block;
+            background-size: 200% 100%; /* For gradient animation */
+            animation: gradientShift 5s ease infinite; /* Gradient shift animation */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05); /* Slight scale-up on hover */
+        }
+
+        /* Gradient shift animation */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Respect prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+            .navbar-brand {
+                animation: none; /* Disable animation for users who prefer reduced motion */
+            }
         }
 
         .main-content {
@@ -92,6 +115,16 @@
         .will-change-transform { will-change: transform; }
         .will-change-opacity { will-change: opacity; }
         .gpu-accelerated { transform: translateZ(0); }
+
+        /* CSS for Contact link visibility */
+        .nav-item .nav-link[href="{% url 'core:contact' %}"] {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .nav-item .nav-link[href="{% url 'core:contact' %}"][aria-current="page"] {
+            color: var(--secondary-color);
+        }
     </style>
 
     <!-- Preload critical fonts -->
