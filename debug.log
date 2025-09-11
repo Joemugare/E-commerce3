@@ -2956,3 +2956,8 @@ INFO 2025-09-10 16:00:23,561 basehttp code 400, message Bad request version ('\x
 ERROR 2025-09-10 16:00:23,561 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
 INFO 2025-09-10 16:00:23,830 basehttp code 400, message Bad request version ('@Î\x06Ð\\^Ü\x05n|°8rX\x82¢\x97E\x96')
 ERROR 2025-09-10 16:00:23,832 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-10 16:08:50,496 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\ecommerce\settings.py changed, reloading.
+INFO 2025-09-10 16:08:52,000 autoreload Watching for file changes with StatReloader
+INFO 2025-09-11 10:12:12,952 autoreload Watching for file changes with StatReloader
+INFO 2025-09-11 10:19:48,904 autoreload C:\Users\ADMIN\Desktop\PYTHON CODES\Claude\E-commerce\ecommerce\settings.py changed, reloading.
+INFO 2025-09-11 10:21:13,365 autoreload Watching for file changes with StatReloader

@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
-{% block title %}Home - EcommerceStore{% endblock %}
+{% load static %}
+
+{% block title %}Home - Hospital Store{% endblock %}
+
+{% block meta_description %}Hospital Store - Your trusted source for quality medical supplies and equipment. Browse our extensive collection of medical products with fast delivery.{% endblock %}
 
 {% block extra_css %}
 <style>
-    /* Custom CSS for enhanced homepage */
+    /* Hero Section - Optimized */
     .hero-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(6, 182, 212, 0.9) 100%),
+                    url('{% static "images/medical-hero-bg.jpg" %}') center/cover no-repeat;
         min-height: 80vh;
         display: flex;
         align-items: center;
         position: relative;
         overflow: hidden;
+        color: white;
     }
-    
+
     .hero-section::before {
         content: '';
         position: absolute;
@@ -20,53 +26,61 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
-        background-size: cover;
-        animation: float 20s ease-in-out infinite;
+        background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+        animation: hero-shimmer 8s ease-in-out infinite;
+        pointer-events: none;
     }
-    
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
+
+    @keyframes hero-shimmer {
+        0%, 100% { transform: translateX(-100%); opacity: 0; }
+        50% { transform: translateX(100%); opacity: 1; }
     }
-    
+
     .hero-content {
         position: relative;
         z-index: 2;
+        max-width: 600px;
     }
-    
+
     .hero-title {
-        font-size: 4rem;
+        font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 800;
         margin-bottom: 1.5rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        animation: slideInUp 1s ease-out;
+        animation: fadeInUp 1s ease-out;
     }
-    
+
     .hero-subtitle {
-        font-size: 1.4rem;
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
         margin-bottom: 2rem;
         opacity: 0.95;
-        animation: slideInUp 1s ease-out 0.3s both;
+        line-height: 1.6;
+        animation: fadeInUp 1s ease-out 0.3s both;
     }
-    
+
     .hero-cta {
-        padding: 15px 40px;
+        padding: 1rem 2.5rem;
         font-size: 1.2rem;
         border-radius: 50px;
         background: linear-gradient(45deg, #ff6b6b, #ff8e53);
         border: none;
-        box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
-        transition: all 0.3s ease;
-        animation: slideInUp 1s ease-out 0.6s both;
+        color: white;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: fadeInUp 1s ease-out 0.6s both;
     }
-    
+
     .hero-cta:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(255, 107, 107, 0.4);
+        color: white;
     }
-    
-    @keyframes slideInUp {
+
+    @keyframes fadeInUp {
         from {
             opacity: 0;
             transform: translateY(30px);
@@ -76,15 +90,78 @@
             transform: translateY(0);
         }
     }
-    
+
+    /* Stats Section - Redesigned */
+    .stats-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 4rem 0;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stats-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 1000,0 1000,100"/></svg>');
+        background-size: cover;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 2;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(45deg, #ffd89b, #19547b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: none;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        font-weight: 500;
+    }
+
+    /* Section Headers */
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
     .section-title {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 4vw, 2.5rem);
         font-weight: 700;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         position: relative;
         display: inline-block;
+        color: #1f2937;
     }
-    
+
     .section-title::after {
         content: '';
         position: absolute;
@@ -93,214 +170,359 @@
         transform: translateX(-50%);
         width: 80px;
         height: 4px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
+        background: linear-gradient(45deg, var(--primary-600), var(--info));
         border-radius: 2px;
     }
-    
+
+    .section-subtitle {
+        color: #6b7280;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Category Cards - Enhanced */
     .category-card {
         border: none;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         height: 100%;
         background: white;
+        position: relative;
     }
-    
+
+    .category-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, var(--primary-600), var(--info));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    .category-card:hover::before {
+        opacity: 0.05;
+    }
+
     .category-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
-    
-    .category-card img {
+
+    .category-card .card-img-top {
         height: 250px;
         object-fit: cover;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease;
     }
-    
-    .category-card:hover img {
-        transform: scale(1.05);
+
+    .category-card:hover .card-img-top {
+        transform: scale(1.1);
     }
-    
+
     .category-card .card-body {
         padding: 2rem;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 200px;
     }
-    
+
     .category-card .card-title {
         font-size: 1.5rem;
         font-weight: 600;
-        color: #333;
+        color: #1f2937;
         margin-bottom: 1rem;
     }
-    
+
+    .category-card .card-text {
+        flex-grow: 1;
+        color: #6b7280;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
     .category-btn {
-        background: linear-gradient(45deg, #667eea, #764ba2);
+        background: linear-gradient(45deg, var(--primary-600), var(--info));
         border: none;
         border-radius: 25px;
-        padding: 12px 30px;
+        padding: 0.75rem 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
         transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        align-self: flex-start;
     }
-    
+
     .category-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-    }
-    
-    .product-card {
-        border: none;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        background: white;
-    }
-    
-    .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    }
-    
-    .product-card img {
-        height: 220px;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-    
-    .product-card:hover img {
-        transform: scale(1.02);
-    }
-    
-    .product-card .card-body {
-        padding: 1.5rem;
-    }
-    
-    .price-original {
-        text-decoration: line-through;
-        color: #999;
-        margin-right: 10px;
-    }
-    
-    .price-discount {
-        color: #e74c3c;
-        font-weight: bold;
-        font-size: 1.1rem;
-    }
-    
-    .discount-badge {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: linear-gradient(45deg, #e74c3c, #c0392b);
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
         color: white;
-        padding: 5px 12px;
+    }
+
+    /* Product Cards - Enhanced */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-image-container {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .product-card:hover img {
+        transform: scale(1.1);
+    }
+
+    .product-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: linear-gradient(135deg, #ef4444, #dc2626);
+        color: white;
+        padding: 0.5rem 1rem;
         border-radius: 20px;
         font-size: 0.8rem;
-        font-weight: bold;
-        box-shadow: 0 2px 10px rgba(231, 76, 60, 0.3);
-    }
-    
-    .view-all-btn {
-        background: linear-gradient(45deg, #3498db, #2980b9);
-        border: none;
-        border-radius: 30px;
-        padding: 12px 40px;
         font-weight: 600;
-        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(239, 68, 68, 0.3);
+        z-index: 2;
     }
-    
-    .view-all-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+
+    .product-card .card-body {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
-    
-    .stats-section {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        padding: 80px 0;
-        color: white;
-        margin: 80px 0;
-    }
-    
-    .stat-item {
-        text-align: center;
-        padding: 2rem;
-    }
-    
-    .stat-number {
-        font-size: 3rem;
-        font-weight: 800;
-        margin-bottom: 0.5rem;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    .stat-label {
+
+    .product-card .card-title {
         font-size: 1.1rem;
-        opacity: 0.9;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
-    
+
+    .product-price {
+        margin-bottom: 1rem;
+    }
+
+    .product-actions {
+        margin-top: auto;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .product-actions .btn {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .product-actions .btn:last-child {
+        flex: 0 0 auto;
+        aspect-ratio: 1;
+        padding: 0.75rem;
+    }
+
+    /* Newsletter Section */
     .newsletter-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 60px 0;
+        background: linear-gradient(135deg, var(--primary-600) 0%, var(--info) 100%);
+        padding: 4rem 0;
         color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .newsletter-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    }
+
+    .newsletter-content {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        margin: 0 auto;
         text-align: center;
     }
-    
+
     .newsletter-title {
         font-size: 2.5rem;
         margin-bottom: 1rem;
+        font-weight: 700;
     }
-    
+
     .newsletter-form {
-        max-width: 500px;
-        margin: 0 auto;
         display: flex;
         gap: 1rem;
+        margin-top: 2rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
+
     .newsletter-input {
         flex: 1;
-        padding: 15px 20px;
+        padding: 1rem 1.5rem;
         border: none;
         border-radius: 30px;
         font-size: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+        color: #374151;
     }
-    
+
+    .newsletter-input:focus {
+        outline: none;
+        background: white;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
     .newsletter-btn {
         background: linear-gradient(45deg, #ff6b6b, #ff8e53);
         border: none;
         border-radius: 30px;
-        padding: 15px 30px;
+        padding: 1rem 2rem;
         color: white;
         font-weight: 600;
         transition: all 0.3s ease;
+        white-space: nowrap;
     }
-    
+
     .newsletter-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
     }
-    
+
+    /* Fade-in Animation */
     .fade-in {
         opacity: 0;
         transform: translateY(30px);
-        transition: all 0.6s ease;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
     }
-    
+
+    /* Loading States */
+    .loading-placeholder {
+        background: #f3f4f6;
+        border-radius: 0.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .loading-placeholder::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+        transform: translateX(-100%);
+        animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-        .hero-title {
+        .hero-section {
+            min-height: 70vh;
+            padding: 2rem 0;
+        }
+
+        .stats-section {
+            padding: 3rem 0;
+        }
+
+        .stat-number {
             font-size: 2.5rem;
         }
-        
-        .section-title {
-            font-size: 2rem;
-        }
-        
+
         .newsletter-form {
             flex-direction: column;
+            gap: 1rem;
+        }
+
+        .newsletter-input,
+        .newsletter-btn {
+            width: 100%;
+        }
+
+        .product-actions {
+            flex-direction: column;
+        }
+
+        .product-actions .btn:last-child {
+            flex: 1;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .category-card .card-body,
+        .product-card .card-body {
+            padding: 1.25rem;
         }
     }
 </style>
@@ -309,167 +531,425 @@
 {% block content %}
 <div class="container-fluid p-0">
     <!-- Enhanced Hero Section -->
-    <div class="hero-section">
+    <section class="hero-section" aria-label="Welcome section">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center hero-content">
-                    <h1 class="hero-title text-white">Welcome to Transdigital</h1>
-                    <p class="hero-subtitle text-white">Discover amazing products at unbeatable prices with fast delivery and exceptional service</p>
-                    <a href="{% url 'products:product_list' %}" class="btn hero-cta text-white">
-                        <i class="fas fa-shopping-bag me-2"></i>Start Shopping
+                <div class="col-lg-8 hero-content">
+                    <h1 class="hero-title">Welcome to Hospital Store</h1>
+                    <p class="hero-subtitle">Your trusted partner in healthcare. Discover premium medical supplies and equipment with guaranteed quality, fast delivery, and exceptional service.</p>
+                    <a href="{% url 'products:product_list' %}" class="hero-cta">
+                        <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                        Start Shopping
                     </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     
     <!-- Stats Section -->
-    <div class="stats-section">
+    <section class="stats-section" aria-label="Company statistics">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3 stat-item fade-in">
-                    <div class="stat-number">10K+</div>
-                    <div class="stat-label">Happy Customers</div>
+            <div class="row g-4">
+                <div class="col-md-3 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="10000">0</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
                 </div>
-                <div class="col-md-3 stat-item fade-in">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Products</div>
+                <div class="col-md-3 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Quality Products</div>
+                    </div>
                 </div>
-                <div class="col-md-3 stat-item fade-in">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Categories</div>
+                <div class="col-md-3 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
                 </div>
-                <div class="col-md-3 stat-item fade-in">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support</div>
+                <div class="col-md-3 fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Customer Support</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     
-    <!-- Enhanced Categories Section -->
+    <!-- Categories Section -->
     {% if categories %}
-    <div class="container mb-5">
-        <div class="text-center mb-5 fade-in">
+    <section class="container my-5" aria-label="Product categories">
+        <div class="section-header fade-in">
             <h2 class="section-title">Shop by Category</h2>
-            <p class="text-muted">Explore our wide range of carefully curated categories</p>
+            <p class="section-subtitle">Explore our comprehensive range of medical supplies and equipment, carefully organized for your convenience.</p>
         </div>
-        <div class="row">
+        <div class="row g-4">
             {% for category in categories %}
-            <div class="col-lg-4 col-md-6 mb-4 fade-in">
-                <div class="category-card card h-100">
-                    {% if category.image %}
-                        <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}">
-                    {% else %}
-                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text={{ category.name }}" class="card-img-top" alt="{{ category.name }}">
-                    {% endif %}
-                    <div class="card-body text-center d-flex flex-column">
-                        <h5 class="card-title">{{ category.name }}</h5>
-                        <p class="card-text text-muted flex-grow-1">{{ category.description|truncatewords:15 }}</p>
-                        <a href="{{ category.get_absolute_url }}" class="btn category-btn text-white mt-auto">
-                            <i class="fas fa-arrow-right me-2"></i>Explore
+            <div class="col-lg-4 col-md-6 fade-in">
+                <div class="category-card card">
+                    <div class="position-relative overflow-hidden">
+                        {% if category.image %}
+                            <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}" loading="lazy">
+                        {% else %}
+                            <div class="loading-placeholder" style="height: 250px;">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&auto=format" 
+                                     class="card-img-top" alt="{{ category.name }}" loading="lazy">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ category.name }}</h3>
+                        <p class="card-text">{{ category.description|truncatewords:20|default:"Discover high-quality medical products in this category." }}</p>
+                        <a href="{{ category.get_absolute_url }}" class="category-btn">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            Explore {{ category.name }}
                         </a>
                     </div>
                 </div>
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
     {% endif %}
     
-    <!-- Enhanced Featured Products -->
+    <!-- Featured Products Section -->
     {% if featured_products %}
-    <div class="container mb-5">
-        <div class="text-center mb-5 fade-in">
+    <section class="container my-5" aria-label="Featured products">
+        <div class="section-header fade-in">
             <h2 class="section-title">Featured Products</h2>
-            <p class="text-muted">Hand-picked products just for you</p>
+            <p class="section-subtitle">Hand-picked medical supplies and equipment, chosen for their exceptional quality and customer satisfaction.</p>
         </div>
-        <div class="row">
+        
+        <div class="product-grid">
             {% for product in featured_products %}
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 fade-in">
-                <div class="product-card card h-100 position-relative">
+            <article class="product-card fade-in" itemscope itemtype="https://schema.org/Product">
+                <div class="product-image-container">
                     {% if product.discount_price %}
-                        <div class="discount-badge">{{ product.get_discount_percentage }}% OFF</div>
+                        <span class="product-badge">{{ product.get_discount_percentage }}% OFF</span>
                     {% endif %}
-                    <a href="{{ product.get_absolute_url }}" class="text-decoration-none">
-                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    <a href="{{ product.get_absolute_url }}" aria-label="View {{ product.name }}">
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy" itemprop="image">
+                        {% else %}
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&auto=format" 
+                                 alt="{{ product.name }}" loading="lazy" itemprop="image">
+                        {% endif %}
                     </a>
-                    <div class="card-body d-flex flex-column">
-                        <h6 class="card-title text-dark">{{ product.name|truncatechars:45 }}</h6>
-                        <div class="mb-3">
-                            {% if product.discount_price %}
-                                <span class="price-original">KSh {{ product.price }}</span>
-                                <span class="price-discount">KSh {{ product.discount_price }}</span>
+                </div>
+                
+                <div class="card-body">
+                    <h3 class="card-title" itemprop="name">{{ product.name|truncatechars:50 }}</h3>
+                    
+                    <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        {% if product.discount_price %}
+                            <span class="price-original">KSh {{ product.price }}</span>
+                            <span class="price-discount" itemprop="price">KSh {{ product.discount_price }}</span>
+                            <meta itemprop="priceCurrency" content="KES">
+                        {% else %}
+                            <span class="price-regular" itemprop="price">KSh {{ product.price }}</span>
+                            <meta itemprop="priceCurrency" content="KES">
+                        {% endif %}
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </div>
+                    
+                    {% if product.average_rating %}
+                    <div class="rating-stars mb-2" aria-label="Rating: {{ product.average_rating }} out of 5 stars">
+                        {% for i in "12345" %}
+                            {% if forloop.counter <= product.average_rating %}
+                                <i class="fas fa-star text-warning" aria-hidden="true"></i>
                             {% else %}
-                                <span class="fw-bold text-primary" style="font-size: 1.1rem;">KSh {{ product.price }}</span>
+                                <i class="far fa-star text-muted" aria-hidden="true"></i>
                             {% endif %}
-                        </div>
-                        <div class="mt-auto d-flex gap-2">
-                            <a href="{{ product.get_absolute_url }}" class="btn btn-outline-primary flex-grow-1">
-                                <i class="fas fa-eye me-1"></i>View
-                            </a>
-                            <button class="btn btn-primary" onclick="addToCart({{ product.id }})">
-                                <i class="fas fa-cart-plus"></i>
-                            </button>
-                        </div>
+                        {% endfor %}
+                        <small class="text-muted ms-1">({{ product.review_count }})</small>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="product-actions">
+                        <a href="{{ product.get_absolute_url }}" class="btn btn-outline-primary">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                            View Details
+                        </a>
+                        <button class="btn btn-primary" onclick="addToCart({{ product.id }})" aria-label="Add {{ product.name }} to cart">
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
+            </article>
             {% endfor %}
         </div>
+        
         <div class="text-center fade-in">
-            <a href="{% url 'products:product_list' %}" class="btn view-all-btn text-white">
-                <i class="fas fa-th-large me-2"></i>View All Products
+            <a href="{% url 'products:product_list' %}" class="btn btn-primary btn-lg">
+                <i class="fas fa-th-large me-2" aria-hidden="true"></i>
+                View All Products
             </a>
         </div>
-    </div>
+    </section>
     {% endif %}
     
     <!-- Newsletter Section -->
-    <div class="newsletter-section">
+    <section class="newsletter-section" aria-label="Newsletter subscription">
         <div class="container">
-            <div class="fade-in">
-                <h3 class="newsletter-title">Stay Updated</h3>
-                <p class="mb-4">Get the latest deals and offers delivered to your inbox</p>
-                <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
+            <div class="newsletter-content fade-in">
+                <h2 class="newsletter-title">Stay Informed</h2>
+                <p class="mb-0">Get the latest updates on medical products, special offers, and health tips delivered to your inbox.</p>
+                
+                <form class="newsletter-form" id="newsletterForm" aria-label="Newsletter subscription form">
+                    <label for="newsletter-email" class="visually-hidden">Email address</label>
+                    <input type="email" 
+                           id="newsletter-email"
+                           class="newsletter-input" 
+                           placeholder="Enter your email address" 
+                           required 
+                           aria-describedby="newsletter-help">
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-text">Subscribe</span>
+                        <span class="btn-loading d-none">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </button>
                 </form>
+                <small id="newsletter-help" class="form-text text-white-50 mt-2">
+                    We respect your privacy and never share your email address.
+                </small>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
+<!-- Enhanced JavaScript -->
 <script>
-// Fade in animation on scroll
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
+document.addEventListener('DOMContentLoaded', function() {
+    // Performance optimizations
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    // Intersection Observer for fade-in animations
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
         
-        if (elementTop < window.innerHeight - elementVisible) {
-            element.classList.add('visible');
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver or reduced motion preference
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.classList.add('visible');
+        });
+    }
+    
+    // Animated counter for stats
+    function animateCounter(element, target, duration = 2000) {
+        if (prefersReducedMotion) {
+            element.textContent = target.toLocaleString();
+            return;
         }
+        
+        const start = 0;
+        const increment = target / (duration / 16);
+        let current = start;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target.toLocaleString();
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current).toLocaleString();
+            }
+        }, 16);
+    }
+    
+    // Initialize counters when they become visible
+    const statNumbers = document.querySelectorAll('[data-count]');
+    if (statNumbers.length > 0 && 'IntersectionObserver' in window) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.count);
+                    animateCounter(entry.target, target);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statNumbers.forEach(el => statsObserver.observe(el));
+    }
+    
+    // Enhanced add to cart functionality
+    window.addToCart = function(productId) {
+        const button = event.target.closest('button');
+        const originalText = button.innerHTML;
+        
+        // Visual feedback
+        button.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i>';
+        button.disabled = true;
+        
+        // Simulate AJAX request
+        fetch(`/cart/add/${productId}/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]')?.value || '',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ quantity: 1 })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Show success feedback
+                button.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i>';
+                button.classList.add('btn-success');
+                
+                // Update cart count if element exists
+                const cartBadge = document.querySelector('.navbar .badge');
+                if (cartBadge && data.cart_count) {
+                    cartBadge.textContent = data.cart_count;
+                    cartBadge.style.animation = 'bounce 0.5s ease';
+                }
+                
+                // Show toast notification
+                showToast('Product added to cart successfully!', 'success');
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('btn-success');
+                    button.disabled = false;
+                }, 2000);
+            } else {
+                throw new Error(data.message || 'Failed to add product to cart');
+            }
+        })
+        .catch(error => {
+            console.error('Error adding to cart:', error);
+            button.innerHTML = originalText;
+            button.disabled = false;
+            showToast('Failed to add product to cart. Please try again.', 'error');
+        });
+    };
+    
+    // Toast notification system
+    function showToast(message, type = 'info') {
+        const toastContainer = getOrCreateToastContainer();
+        const toast = document.createElement('div');
+        toast.className = `toast align-items-center text-white bg-${type === 'error' ? 'danger' : type === 'success' ? 'success' : 'primary'} border-0`;
+        toast.setAttribute('role', 'alert');
+        toast.innerHTML = `
+            <div class="d-flex">
+                <div class="toast-body">${message}</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        `;
+        
+        toastContainer.appendChild(toast);
+        const bsToast = new bootstrap.Toast(toast, { delay: 5000 });
+        bsToast.show();
+        
+        toast.addEventListener('hidden.bs.toast', () => {
+            toast.remove();
+        });
+    }
+    
+    function getOrCreateToastContainer() {
+        let container = document.getElementById('toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'toast-container';
+            container.className = 'toast-container position-fixed top-0 end-0 p-3';
+            container.style.zIndex = '1100';
+            document.body.appendChild(container);
+        }
+        return container;
+    }
+    
+    // Newsletter form handling
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('#newsletter-email').value;
+            const button = this.querySelector('.newsletter-btn');
+            const btnText = button.querySelector('.btn-text');
+            const btnLoading = button.querySelector('.btn-loading');
+            
+            // Show loading state
+            btnText.classList.add('d-none');
+            btnLoading.classList.remove('d-none');
+            button.disabled = true;
+            
+            // Simulate newsletter subscription
+            setTimeout(() => {
+                btnText.classList.remove('d-none');
+                btnLoading.classList.add('d-none');
+                button.disabled = false;
+                
+                showToast('Thank you for subscribing to our newsletter!', 'success');
+                this.reset();
+            }, 1500);
+        });
+    }
+    
+    // Lazy loading for images (if not supported natively)
+    if ('loading' in HTMLImageElement.prototype === false) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        if (images.length > 0) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('loading-placeholder');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        }
+    }
+    
+    // Preload critical resources on user interaction
+    let hasInteracted = false;
+    function preloadCriticalResources() {
+        if (hasInteracted) return;
+        hasInteracted = true;
+        
+        // Preload product list page
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = "{% url 'products:product_list' %}";
+        document.head.appendChild(link);
+    }
+    
+    // Preload on first user interaction
+    ['mousedown', 'touchstart', 'keydown'].forEach(event => {
+        document.addEventListener(event, preloadCriticalResources, { once: true, passive: true });
+    });
+});
+
+// Service Worker registration for caching (if available)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(() => console.log('SW registered'))
+            .catch(() => console.log('SW registration failed'));
     });
 }
-
-// Add to cart function (placeholder)
-function addToCart(productId) {
-    // Add your cart functionality here
-    console.log('Added product ' + productId + ' to cart');
-    // You can show a toast notification or update cart count
-}
-
-// Event listeners
-window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', animateOnScroll);
-
-// Newsletter form submission
-document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Add your newsletter subscription logic here
-    alert('Thank you for subscribing!');
-});
 </script>
 {% endblock %}

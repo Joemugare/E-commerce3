@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ecommerce",
     "\\templates",
     "\\templates\\accoounts",
     "\\templates\\core"
   ],
-  "SelectedNode": "\\templates\\base.html",
+  "SelectedNode": "\\ecommerce\\settings.py",
   "PreviewInSolutionExplorer": false
 }
