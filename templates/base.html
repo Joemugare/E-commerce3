@@ -71,26 +71,24 @@
             text-decoration: none;
             position: relative;
             display: inline-block;
-            background-size: 200% 100%; /* For gradient animation */
-            animation: gradientShift 5s ease infinite; /* Gradient shift animation */
-            transition: transform 0.3s ease; /* Smooth hover effect */
+            background-size: 200% 100%;
+            animation: gradientShift 5s ease infinite;
+            transition: transform 0.3s ease;
         }
 
         .navbar-brand:hover {
-            transform: scale(1.05); /* Slight scale-up on hover */
+            transform: scale(1.05);
         }
 
-        /* Gradient shift animation */
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Respect prefers-reduced-motion */
         @media (prefers-reduced-motion: reduce) {
             .navbar-brand {
-                animation: none; /* Disable animation for users who prefer reduced motion */
+                animation: none;
             }
         }
 
@@ -123,6 +121,16 @@
         }
 
         .nav-item .nav-link[href="{% url 'core:contact' %}"][aria-current="page"] {
+            color: var(--secondary-color);
+        }
+
+        /* CSS for Featured Deals link visibility */
+        .nav-item .nav-link[href="{% url 'core:featured_deals' %}"] {
+            color: var(--warning-color);
+            font-weight: 500;
+        }
+
+        .nav-item .nav-link[href="{% url 'core:featured_deals' %}"][aria-current="page"] {
             color: var(--secondary-color);
         }
     </style>
@@ -182,6 +190,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'products:product_list' %}"
                            {% if 'products' in request.resolver_match.app_name %}aria-current="page"{% endif %}>Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'core:featured_deals' %}"
+                           {% if request.resolver_match.url_name == 'featured_deals' %}aria-current="page"{% endif %}>Featured Deals</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'core:about' %}"
