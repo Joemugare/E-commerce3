@@ -16,6 +16,15 @@ ALLOWED_HOSTS = [
     os.environ.get('DJANGO_ALLOWED_HOST', ''),
 ]
 
+# CSRF Trusted Origins
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'https://*.onrender.com',
+    'https://transdigitalsystem.it.com',
+    'http://transdigitalsystem.it.com',  # Include HTTP for testing if HTTPS isn't enforced
+]
+
 # Application definition
 DJANGO_APPS = [
     'django.contrib.admin',
@@ -148,7 +157,7 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 # Cart Configuration
 CART_SESSION_ID = 'cart'
 
-# Session Configuration (optimized)
+# Session Configuration
 SESSION_COOKIE_AGE = 1209600  # 2 weeks
 SESSION_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_HTTPONLY = True
@@ -161,7 +170,7 @@ CSRF_COOKIE_SECURE = not DEBUG
 CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = 'Lax'
 
-# Cache Configuration (simplified)
+# Cache Configuration
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
@@ -205,9 +214,8 @@ LOGGING = {
 # Custom Settings
 APPEND_SLASH = True
 
-# Performance Settings
+# Performance and Security Settings for Production
 if not DEBUG:
-    # Security settings for production
     SECURE_SSL_REDIRECT = True
     SECURE_HSTS_SECONDS = 31536000
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
